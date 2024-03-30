@@ -11,11 +11,6 @@
       padding: 0;
     }
 
-    #container {
-      max-width: 70%;
-      margin: 0 auto;
-    }
-
     header {
       display: flex;
       justify-content: space-between;
@@ -58,11 +53,13 @@
     #middle-section {
       text-align: center;
       padding: 20px;
+      max-width: 100%; /* Set max width to 100% of viewport width */
+      margin: 0 auto; /* Center content horizontally */
     }
 
     #animation {
-      max-width: 1000px;
-      margin: auto;
+      max-width: 100%; /* Set max width to 100% of viewport width */
+      margin: auto; /* Center content horizontally */
     }
 
     @media(max-width: 768px) {
@@ -92,37 +89,48 @@
   </style>
 </head>
 <body>
-  <div id="container">
-    <header>
-      <div id="profile-pic">
-        <img src="index_files/graduation.JPG" alt="Profile Picture">
-      </div>
-      <div id="menu-icon">&#9776;</div>
-      <nav>
-        <ul>
-          <li><a href="#">Instagram</a></li>
-          <li><a href="#">Google Scholar</a></li>
-          <li><a href="https://www.linkedin.com/in/bimal-k-c-8a5775112/" target="_blank">LinkedIn</a></li>
-          <li><a href="https://github.com/kcbimal" target="_blank">GitHub</a></li>
-        </ul>
-      </nav>
-    </header>
+  <header>
+    <div id="profile-pic">
+      <img src="index_files/graduation.JPG" alt="Profile Picture">
+    </div>
+    <div id="menu-icon">&#9776;</div>
+    <nav>
+      <ul>
+        <li><a href="course.index" target="_blank">Course</a></li>
+        <li><a href="#">Google Scholar</a></li>
+        <li><a href="https://www.linkedin.com/in/bimal-k-c-8a5775112/" target="_blank">LinkedIn</a></li>
+        <li><a href="https://github.com/kcbimal" target="_blank">GitHub</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <div id="middle-section">
-      <div class="slideshow-container">
-        <!-- Slideshow content goes here -->
+  <div id="middle-section">
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 8</div>
+        <img src="./index_files/award.jpg" style="width:100%">
+        <div class="text">Excellence award (2019), Physics Department, UTEP</div>
       </div>
-      <br>
-      <div style="text-align:center">
-        <span class="dot"></span> 
-        <span class="dot"></span> 
-        <span class="dot"></span> 
-        <span class="dot"></span> 
-        <span class="dot"></span> 
-        <span class="dot"></span> 
-        <span class="dot"></span>
-        <span class="dot"></span>
+      
+      <!-- Other slides go here -->
+
+      <div class="mySlides fade">
+        <div class="numbertext">8 / 8</div>
+        <img src="./index_files/aps.jpeg" style="width:100%">
+        <div class="text">APS March Meeting 2024, Minneapolis, MN </div>
       </div>
+    </div>
+    <br>
+
+    <div style="text-align:center">
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span>
+      <span class="dot"></span>
     </div>
   </div>
 
