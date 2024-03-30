@@ -1,104 +1,97 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Website</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
 
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 20px;
-      background-color: #FFDAB9; /* Light orange background */
-      color: #333; /* Dark text color */
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for a bit of depth */
-    }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #FFDAB9; /* Light orange background */
+    color: #333; /* Dark text color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for a bit of depth */
+  }
 
-    #profile-details {
-      display: flex;
-      align-items: center;
-    }
+  #profile-details {
+    display: flex;
+    align-items: center;
+  }
 
-    #profile-pic {
-      width: 120px; /* Increased size */
-      height: 120px; /* Increased size */
-      border-radius: 50%;
-      overflow: hidden;
-      margin-right: 20px; /* Increased margin */
-    }
+  #profile-pic {
+    width: 120px; /* Increased size */
+    height: 120px; /* Increased size */
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 20px; /* Increased margin */
+  }
 
-    #profile-pic img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+  #profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
-    #profile-name {
-      font-weight: bold;
-      font-size: 30px; /* Increased font size */
-    }
+  #profile-name {
+    font-weight: bold;
+    font-size: 30px; /* Increased font size */
+  }
 
+  #menu-icon {
+    display: none;
+    cursor: pointer;
+  }
+
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+  }
+
+  #middle-section {
+    text-align: center;
+    padding: 20px;
+    margin: 0 auto; /* Center content horizontally */
+  }
+
+  #animation {
+    width: 100%; /* Expand to full width */
+    background-color: #f2f2f2; /* Light grey background */
+  }
+
+  @media(max-width: 768px) {
     #menu-icon {
-      display: none;
-      cursor: pointer;
+      display: block;
     }
 
     nav ul {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
+      display: none;
+      position: absolute;
+      top: 60px;
+      right: 10px;
+      background-color: #FFDAB9; /* Light orange background */
+      padding: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for consistency */
     }
 
     nav ul li {
-      display: inline-block;
-      margin-left: 20px;
+      display: block;
+      margin: 10px 0;
     }
 
-    #middle-section {
-      text-align: center;
-      padding: 20px;
-      max-width: 100%; /* Set max width to 100% of viewport width */
-      margin: 0 auto; /* Center content horizontally */
+    nav ul.active {
+      display: block;
     }
+  }
+</style>
 
-    #animation {
-      max-width: 70%; /* Set max width to 70% of viewport width */
-      margin: auto; /* Center content horizontally */
-      background-color: #f2f2f2; /* Light grey background */
-    }
-
-    @media(max-width: 768px) {
-      #menu-icon {
-        display: block;
-      }
-
-      nav ul {
-        display: none;
-        position: absolute;
-        top: 60px;
-        right: 10px;
-        background-color: #FFDAB9; /* Light orange background */
-        padding: 10px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for consistency */
-      }
-
-      nav ul li {
-        display: block;
-        margin: 10px 0;
-      }
-
-      nav ul.active {
-        display: block;
-      }
-    }
-  </style>
 </head>
 <body>
   <header>
