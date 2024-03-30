@@ -1,8 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Title</title>
 <style>
   body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f2f2f2; /* Original background color */
   }
 
   header {
@@ -10,7 +17,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #FFDAB9; /* Light orange background */
+    background-color: rgba(255, 218, 185, 0.75); /* Adjusted light orange background */
     color: #333; /* Dark text color */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for a bit of depth */
   }
@@ -62,8 +69,9 @@
   }
 
   #animation {
-    width: 100%; /* Expand to full width */
-    background-color: #f2f2f2; /* Light grey background */
+    width: 75%; /* Expand to full width */
+    background-color: #fff; /* Light grey background */
+    opacity: 0.75; /* Opacity for light orange background */
   }
 
   .mySlides img {
@@ -80,7 +88,7 @@
       position: absolute;
       top: 60px;
       right: 10px;
-      background-color: #FFDAB9; /* Light orange background */
+      background-color: rgba(255, 218, 185, 0.75); /* Adjusted light orange background */
       padding: 10px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for consistency */
     }
@@ -99,11 +107,9 @@
     }
   }
 </style>
-
-
 </head>
 <body>
-  <header>
+<header>
     <div id="profile-details">
       <div id="profile-pic">
         <img src="index_files/graduation.JPG" alt="Profile Picture">
