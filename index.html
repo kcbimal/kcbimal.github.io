@@ -51,29 +51,13 @@
     }
 
     #middle-section {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 80vh;
+      text-align: center;
+      padding: 20px;
     }
 
     #animation {
-      width: 200px;
-      height: 200px;
-      background-color: #ccc;
-      border-radius: 50%;
-      margin-bottom: 20px;
-      animation: spin 2s linear infinite;
-    }
-
-    @keyframes spin {
-      0% {
-        transform: rotate(0deg);
-      }
-      100% {
-        transform: rotate(360deg);
-      }
+      max-width: 1000px;
+      margin: auto;
     }
 
     @media(max-width: 768px) {
@@ -105,7 +89,7 @@
 <body>
   <header>
     <div id="profile-pic">
-      <img src="graduation.JPG" alt="Profile Picture">
+      <img src="index_files/graduation.JPG" alt="Profile Picture">
     </div>
     <div id="menu-icon">&#9776;</div>
     <nav>
@@ -119,14 +103,55 @@
   </header>
 
   <div id="middle-section">
-    <div id="animation"></div>
-    <p>Photo Animation</p>
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 8</div>
+        <img src="./index_files/award.jpg" style="width:100%">
+        <div class="text">Excellence award (2019), Physics Department, UTEP</div>
+      </div>
+      
+      <!-- Other slides go here -->
+
+      <div class="mySlides fade">
+        <div class="numbertext">8 / 8</div>
+        <img src="./index_files/aps.jpeg" style="width:100%">
+        <div class="text">APS March Meeting 2024, Minneapolis, MN </div>
+      </div>
+    </div>
+    <br>
+
+    <div style="text-align:center">
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
   </div>
 
   <script>
-    document.getElementById('menu-icon').addEventListener('click', function() {
-      document.querySelector('nav ul').classList.toggle('active');
-    });
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 3000); // Change image every 3 seconds
+    }
   </script>
 </body>
 </html>
