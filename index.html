@@ -135,6 +135,10 @@
   </div>
 
   <script>
+    document.getElementById('menu-icon').addEventListener('click', function() {
+      document.querySelector('nav ul').classList.toggle('active');
+    });
+
     let slideIndex = 0;
     showSlides();
 
