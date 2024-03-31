@@ -84,6 +84,11 @@
   .mySlides img {
     width: 75%; /* Set photos to 75% width */
   }
+  
+  .numbertext {
+    display: block;
+    color: #f2f2f2;
+  }
 
   @media(max-width: 768px) {
     #menu-icon {
@@ -141,49 +146,49 @@
   <div id="middle-section">
     <div id="animation" class="slideshow-container">
       <div class="mySlides fade">
-        <div class="numbertext">1 / 8</div>
+        <div class="numbertext"></div>
         <img src="./index_files/award.jpg" style="width:75%">
         <div class="text">Excellence award (2019), Physics Department, UTEP</div>
       </div>
       
       <div class="mySlides fade">
-        <div class="numbertext">2 / 8</div>
+        <div class="numbertext"></div>
         <img src="./index_files/lab1.jpg" style="width:75%">
         <div class="text">Dr. Jorge research group members: Enjoying indoor skydiving @ifly</div>
       </div>
 
       <div class="mySlides fade">
-        <div class="numbertext">3 / 8</div>
+        <div class="numbertext"></div>
         <img src="./index_files/fam1.jpg" style="width:75%">
         <div class="text">My sweet family and my inspirations</div>
       </div>
 
       <div class="mySlides fade">
-        <div class="numbertext">4 / 8</div>
+        <div class="numbertext"></div>
         <img src="./index_files/fam2.jpeg" style="width:75%">
         <div class="text">My family members (my son was sleeping :P) </div>
       </div>
 
       <div class="mySlides fade">
-        <div class="numbertext">5 / 8</div>
+        <div class="numbertext"></div>
         <img src="./index_files/lab.JPG" style="width:75%">
         <div class="text">Lunch with my research advisor & lab members</div>
       </div>
 
       <div class="mySlides fade">
-        <div class="numbertext">6 / 8</div>
+        <div class="numbertext"></div>
         <img src="./index_files/graduation1.JPG" style="width:75%">
         <div class="text">MS graduation ceremony (UTEP). Dec 15 2019</div>
       </div>
 
       <div class="mySlides fade">
-        <div class="numbertext">7 / 8</div>
+        <div class="numbertext"></div>
         <img src="./index_files/ta.jpg" style="width:75%">
         <div class="text">Outstanding Achievement Award: Better Rated by Students (2019)</div>
       </div>
 
       <div class="mySlides fade">
-        <div class="numbertext">8 / 8</div>
+        <div class="numbertext"></div>
         <img src="./index_files/aps.jpeg" style="width:75%">
         <div class="text">APS March Meeting 2024, Minneapolis, MN </div>
       </div>
@@ -224,6 +229,13 @@
       }
       slides[slideIndex-1].style.display = "block";  
       dots[slideIndex-1].className += " active";
+      
+      // Update slide numbers
+      let slideNumbers = document.getElementsByClassName("numbertext");
+      for (i = 0; i < slideNumbers.length; i++) {
+        slideNumbers[i].innerText = slideIndex + " / " + slides.length;
+      }
+      
       setTimeout(showSlides, 3000); // Change image every 3 seconds
     }
   </script>
