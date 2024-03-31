@@ -9,7 +9,19 @@
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f2f2f2; /* Original background color */
+  }
+
+  .container {
+    width: 75%;
+    height: 100vh;
+    float: left;
+  }
+
+  .background {
+    width: 25%;
+    height: 100vh;
+    float: right;
+    background-color: #f2f2f2; /* Light grey background */
   }
 
   header {
@@ -121,123 +133,126 @@
 </style>
 </head>
 <body>
-<header>
-    <div id="profile-details">
-      <div id="profile-pic">
-        <img src="index_files/graduation.JPG" alt="Profile Picture">
+<div class="container">
+  <header>
+      <div id="profile-details">
+        <div id="profile-pic">
+          <img src="index_files/graduation.JPG" alt="Profile Picture">
+        </div>
+        <div id="profile-name">
+          <span class="main-name">Bimal K C</span><br>
+          <span class="position">PhD Candidate at <a href="https://www.utep.edu/science/computational-science/" target="_self">UTEP</span>
+        </div>
       </div>
-      <div id="profile-name">
-        <span class="main-name">Bimal K C</span><br>
-        <span class="position">PhD Candidate at <a href="https://www.utep.edu/science/computational-science/" target="_self">UTEP</span>
+      <div id="menu-icon">&#9776;</div>
+      <nav>
+        <ul>
+          <li><a href="index_files/cvv.pdf" target="_self">CV</a></li>
+         <!-- <li><a href="https://kcbimal.github.io/course.html" target="_self">Courses</a></li> --> 
+          <li><a href="https://scholar.google.comm/citations?hl=en&user=fSqUY48AAAAJ" target="_self">Google Scholar</a></li>
+          <li><a href="https://www.linkedin.com/in/bimal-k-c-8a5775112/" target="_self">LinkedIn</a></li>
+          <li><a href="https://github.com/kcbimal" target="_self">GitHub</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div id="middle-section">
+      <div id="animation" class="slideshow-container">
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="./index_files/award.jpg" style="width:75%">
+          <div class="text">Excellence award (2019), Physics Department, UTEP</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="./index_files/lab1.jpg" style="width:75%">
+          <div class="text">Dr. Jorge research group members: Enjoying indoor skydiving @ifly</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="./index_files/fam1.jpg" style="width:75%">
+          <div class="text">My sweet family and my inspirations</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="./index_files/fam2.jpeg" style="width:75%">
+          <div class="text">My family members (my son was sleeping :P) </div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="./index_files/lab.JPG" style="width:75%">
+          <div class="text">Lunch with my research advisor & lab members</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="./index_files/graduation1.JPG" style="width:75%">
+          <div class="text">MS graduation ceremony (UTEP). Dec 15 2019</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="./index_files/ta.jpg" style="width:75%">
+          <div class="text">Outstanding Achievement Award: Better Rated by Students (2019)</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="./index_files/aps.jpeg" style="width:75%">
+          <div class="text">APS March Meeting 2024, Minneapolis, MN </div>
+        </div>
+      </div>
+      <br>
+
+      <div style="text-align:center">
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span>
+        <span class="dot"></span>
       </div>
     </div>
-    <div id="menu-icon">&#9776;</div>
-    <nav>
-      <ul>
-        <li><a href="index_files/cvv.pdf" target="_self">CV</a></li>
-       <!-- <li><a href="https://kcbimal.github.io/course.html" target="_self">Courses</a></li> --> 
-        <li><a href="https://scholar.google.comm/citations?hl=en&user=fSqUY48AAAAJ" target="_self">Google Scholar</a></li>
-        <li><a href="https://www.linkedin.com/in/bimal-k-c-8a5775112/" target="_self">LinkedIn</a></li>
-        <li><a href="https://github.com/kcbimal" target="_self">GitHub</a></li>
-      </ul>
-    </nav>
-  </header>
+</div>
+<div class="background"></div>
 
-  <div id="middle-section">
-    <div id="animation" class="slideshow-container">
-      <div class="mySlides fade">
-        <div class="numbertext"></div>
-        <img src="./index_files/award.jpg" style="width:75%">
-        <div class="text">Excellence award (2019), Physics Department, UTEP</div>
-      </div>
-      
-      <div class="mySlides fade">
-        <div class="numbertext"></div>
-        <img src="./index_files/lab1.jpg" style="width:75%">
-        <div class="text">Dr. Jorge research group members: Enjoying indoor skydiving @ifly</div>
-      </div>
+<script>
+  document.getElementById('menu-icon').addEventListener('click', function() {
+    document.querySelector('nav ul').classList.toggle('active');
+  });
 
-      <div class="mySlides fade">
-        <div class="numbertext"></div>
-        <img src="./index_files/fam1.jpg" style="width:75%">
-        <div class="text">My sweet family and my inspirations</div>
-      </div>
+  let slideIndex = 0;
+  showSlides();
 
-      <div class="mySlides fade">
-        <div class="numbertext"></div>
-        <img src="./index_files/fam2.jpeg" style="width:75%">
-        <div class="text">My family members (my son was sleeping :P) </div>
-      </div>
-
-      <div class="mySlides fade">
-        <div class="numbertext"></div>
-        <img src="./index_files/lab.JPG" style="width:75%">
-        <div class="text">Lunch with my research advisor & lab members</div>
-      </div>
-
-      <div class="mySlides fade">
-        <div class="numbertext"></div>
-        <img src="./index_files/graduation1.JPG" style="width:75%">
-        <div class="text">MS graduation ceremony (UTEP). Dec 15 2019</div>
-      </div>
-
-      <div class="mySlides fade">
-        <div class="numbertext"></div>
-        <img src="./index_files/ta.jpg" style="width:75%">
-        <div class="text">Outstanding Achievement Award: Better Rated by Students (2019)</div>
-      </div>
-
-      <div class="mySlides fade">
-        <div class="numbertext"></div>
-        <img src="./index_files/aps.jpeg" style="width:75%">
-        <div class="text">APS March Meeting 2024, Minneapolis, MN </div>
-      </div>
-    </div>
-    <br>
-
-    <div style="text-align:center">
-      <span class="dot"></span> 
-      <span class="dot"></span> 
-      <span class="dot"></span> 
-      <span class="dot"></span> 
-      <span class="dot"></span> 
-      <span class="dot"></span> 
-      <span class="dot"></span>
-      <span class="dot"></span>
-    </div>
-  </div>
-
-  <script>
-    document.getElementById('menu-icon').addEventListener('click', function() {
-      document.querySelector('nav ul').classList.toggle('active');
-    });
-
-    let slideIndex = 0;
-    showSlides();
-
-    function showSlides() {
-      let i;
-      let slides = document.getElementsByClassName("mySlides");
-      let dots = document.getElementsByClassName("dot");
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-      }
-      slideIndex++;
-      if (slideIndex > slides.length) {slideIndex = 1}    
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-      }
-      slides[slideIndex-1].style.display = "block";  
-      dots[slideIndex-1].className += " active";
-      
-      // Update slide numbers
-      let slideNumbers = document.getElementsByClassName("numbertext");
-      for (i = 0; i < slideNumbers.length; i++) {
-        slideNumbers[i].innerText = slideIndex + " / " + slides.length;
-      }
-      
-      setTimeout(showSlides, 3000); // Change image every 3 seconds
+  function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
     }
-  </script>
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    
+    // Update slide numbers
+    let slideNumbers = document.getElementsByClassName("numbertext");
+    for (i = 0; i < slideNumbers.length; i++) {
+      slideNumbers[i].innerText = slideIndex + " / " + slides.length;
+    }
+    
+    setTimeout(showSlides, 3000); // Change image every 3 seconds
+  }
+</script>
 </body>
 </html>
