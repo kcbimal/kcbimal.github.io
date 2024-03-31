@@ -25,6 +25,8 @@
   #profile-details {
     display: flex;
     align-items: center;
+    flex-shrink: 1; /* Allow shrinking */
+    max-width: 50%; /* Limit width to 50% */
   }
 
   #profile-pic {
@@ -73,10 +75,11 @@
     text-align: center;
     padding: 20px;
     margin: 0 auto; /* Center content horizontally */
+    max-width: 50%; /* Limit width to 50% */
   }
 
   #animation {
-    width: 75%; /* Expand to full width */
+    width: 100%; /* Expand to full width */
     background-color: #fff; /* Light grey background */
     opacity: 0.75; /* Opacity for light orange background */
   }
