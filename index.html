@@ -59,7 +59,7 @@
     text-align: center;
     padding: 20px;
     margin: 0 auto; /* Center content horizontally */
-    background-color: #f2f2f2; /* Light grey background inside the golden margin */
+    background-color: #f2f2f2; /* White background inside the golden margin */
   }
 
   #animation {
@@ -73,7 +73,8 @@
   }
   
   .numbertext {
-    display: none; /* Hide slide numbers */
+    display: block;
+    color: #f2f2f2;
   }
 
   footer {
@@ -117,20 +118,6 @@
     .mySlides img {
       width: 100%; /* Set photos to 100% width on smaller screens */
     }
-    
-    header {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-
-    #profile-details {
-      order: 2;
-      margin-bottom: 10px;
-    }
-
-    nav {
-      order: 1;
-    }
   }
 </style>
 </head>
@@ -143,14 +130,6 @@
       </div>
     </div>
     <div id="menu-icon">&#9776;</div>
-    <nav>
-      <ul>
-        <li><a href="index_files/cvv.pdf" target="_self">CV</a></li>
-        <li><a href="https://scholar.google.comm/citations?hl=en&user=fSqUY48AAAAJ" target="_self">Google Scholar</a></li>
-        <li><a href="https://www.linkedin.com/in/bimal-k-c-8a5775112/" target="_self">LinkedIn</a></li>
-        <li><a href="https://github.com/kcbimal" target="_self">GitHub</a></li>
-      </ul>
-    </nav>
   </header>
 
   <div id="middle-section">
@@ -202,10 +181,10 @@
       dots[slideIndex-1].className += " active";
       
       // Update slide numbers
-      // let slideNumbers = document.getElementsByClassName("numbertext");
-      // for (i = 0; i < slideNumbers.length; i++) {
-      //   slideNumbers[i].innerText = slideIndex + " / " + slides.length;
-      // }
+      let slideNumbers = document.getElementsByClassName("numbertext");
+      for (i = 0; i < slideNumbers.length; i++) {
+        slideNumbers[i].innerText = slideIndex + " / " + slides.length;
+      }
       
       setTimeout(showSlides, 3000); // Change image every 3 seconds
     }
