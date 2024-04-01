@@ -59,12 +59,13 @@
     text-align: justify; /* Justify text between margins */
     padding: 4vw; /* Adjusted padding using viewport units */
     margin: 0 auto; /* Center content horizontally */
+    width: 100%; /* Adjusted width to 100% */
   }
 
   #animation-container {
     padding: 4vw; /* Adjusted padding using viewport units */
     margin: 0 auto;
-    max-width: 80vw; /* Adjusted max-width using viewport units */
+    max-width: 100%; /* Adjusted max-width using viewport units */
     background-color: #fff; /* Light grey background */
     opacity: 0.75; /* Opacity for light orange background */
   }
@@ -74,11 +75,11 @@
   }
 
   .mySlides img {
-    width: 75%; /* Set photos to 75% width */
+    width: 100%; /* Set photos to 100% width */
   }
   
   .text {
-    font-size: 85%; /* Reduce caption size by 35% */
+    font-size: 110%; /* Increase caption size by 10% */
   }
 
   footer {
@@ -90,11 +91,18 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    flex-wrap: wrap; /* Allow wrapping of elements */
+  }
+
+  footer a, footer p {
+    color: #fff; /* White text color */
+    text-decoration: none;
+    margin: 0 2vw; /* Adjusted margin using viewport units */
+    font-size: 70%; /* Reduce font size by 30% */
   }
 
   .footer-links {
-    margin-bottom: 1vw; /* Adjust margin as needed */
+    display: flex;
+    align-items: center;
   }
 
   .footer-links a {
@@ -103,10 +111,6 @@
 
   .footer-links img {
     margin-right: 2vw; /* Adjust margin as needed */
-  }
-
-  .footer-bottom {
-    width: calc(100% - 8vw); /* Adjusted width to match the top panel */
   }
 
   /* Styles for CV box */
@@ -257,9 +261,7 @@
       <img src="https://github.com/favicon.ico" alt="GitHub" style="width: 3vw; height: 3vw;">
     </a>
   </div>
-  <div class="footer-bottom">
-    <p>Contact: bkc@miners.utep.edu</p>
-  </div>
+  <p>Contact: bkc@miners.utep.edu</p>
 </footer>
 
 <script>
