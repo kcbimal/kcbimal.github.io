@@ -90,18 +90,11 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-  }
-
-  footer a, footer p {
-    color: #fff; /* White text color */
-    text-decoration: none;
-    margin: 0 2vw; /* Adjusted margin using viewport units */
-    font-size: 70%; /* Reduce font size by 30% */
+    flex-wrap: wrap; /* Allow wrapping of elements */
   }
 
   .footer-links {
-    display: flex;
-    align-items: center;
+    margin-bottom: 1vw; /* Adjust margin as needed */
   }
 
   .footer-links a {
@@ -110,6 +103,10 @@
 
   .footer-links img {
     margin-right: 2vw; /* Adjust margin as needed */
+  }
+
+  .footer-bottom {
+    width: calc(100% - 8vw); /* Adjusted width to match the top panel */
   }
 
   /* Styles for CV box */
@@ -260,7 +257,9 @@
       <img src="https://github.com/favicon.ico" alt="GitHub" style="width: 3vw; height: 3vw;">
     </a>
   </div>
-  <p>Contact: bkc@miners.utep.edu</p>
+  <div class="footer-bottom">
+    <p>Contact: bkc@miners.utep.edu</p>
+  </div>
 </footer>
 
 <script>
