@@ -23,7 +23,8 @@
   }
 
   #profile-details {
-    display: none; /* Hide profile details on mobile */
+    display: flex;
+    align-items: center;
   }
 
   #profile-name {
@@ -52,15 +53,6 @@
   nav ul li {
     display: inline-block;
     margin-left: 20px;
-  }
-
-  .cv-link {
-    display: inline-block;
-    background-color: #fff;
-    padding: 5px 10px;
-    border-radius: 10px;
-    color: #000;
-    text-decoration: none;
   }
 
   #middle-section {
@@ -115,6 +107,21 @@
     margin-right: 10px; /* Adjust margin as needed */
   }
 
+  /* Styles for CV box */
+  .cv-box {
+    display: inline-block;
+    padding: 4px 8px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  .cv-box a {
+    text-decoration: none;
+    color: #000; /* Black text color */
+  }
+
   @media(max-width: 768px) {
     #menu-icon {
       display: block;
@@ -155,12 +162,11 @@
     </div>
     <nav>
       <ul>
-        <li><a class="cv-link" href="index_files/cvv.pdf" target="_self">CV</a></li>
+        <li><a href="index_files/cvv.pdf" target="_self">CV</a></li>
       </ul>
     </nav>
     <div id="menu-icon">&#9776;</div>
   </header>
-
   <div id="middle-section">
     <div id="animation" class="slideshow-container">
       <div class="mySlides fade">
@@ -225,9 +231,8 @@
     </div>
   </div>
 
+
 <footer>
-   <!-- <li><a href="https://kcbimal.github.io/course.html" target="_self">Courses</a></li> -->
-  <a href="https://www.linkedin.com/in/bimal-k-c-8a5775112/" target="_self">
   <div class="footer-links">
     <a href="https://scholar.google.com/citations?hl=en&user=fSqUY48AAAAJ" target="_self">
       <img src="https://scholar.google.com/favicon.ico" alt="Google Scholar" style="width: 25px; height: 25px;">
