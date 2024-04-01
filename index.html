@@ -56,45 +56,40 @@
   }
 
   #middle-section {
-    text-align: justify;
-    padding: 4vw;
-    margin: 0 auto;
-    max-width: 80vw;
-    background-color: #fff;
-    opacity: 0.75;
-    position: relative; /* Added position relative */
+    text-align: justify; /* Justify text between margins */
+    padding: 4vw; /* Adjusted padding using viewport units */
+    margin: 0 auto; /* Center content horizontally */
   }
 
   #animation-container {
-    padding: 4vw;
-    position: absolute; /* Changed position to absolute */
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Center the container */
-    background-color: #fff;
-    opacity: 0.75;
+    padding: 4vw; /* Adjusted padding using viewport units */
+    margin: 0 auto;
+    max-width: 80vw; /* Adjusted max-width using viewport units */
+    background-color: #fff; /* Light grey background */
+    opacity: 0.75; /* Opacity for light orange background */
+  }
+
+  #animation {
+    width: 100%; /* Expand to full width */
   }
 
   .mySlides img {
-    width: 100%; /* Set photos to 100% width */
+    width: 75%; /* Set photos to 75% width */
   }
-
+  
   .text {
-    font-size: 85%; /* Reduce caption size by 15% */
+    font-size: 85%; /* Reduce caption size by 35% */
   }
 
   footer {
-    background-color: #000;
+    background-color: #000; /* Black background color */
     padding: 2vw 4vw;
     text-align: center;
-    border-top: none;
-    color: #fff;
+    border-top: none; /* Remove border */
+    color: #fff; /* White text color */
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    position: absolute; /* Added position absolute */
-    bottom: 0; /* Align to the bottom */
-    width: 100%; /* Full width */
   }
 
   footer a, footer p {
@@ -183,7 +178,7 @@
   </header>
 
 <div id="middle-section">
-  <p>I am born and raised in Nepal. I received my Bachelor and Master of Science from Tribhuvan University 
+ <p>I am born and raised in Nepal. I received my Bachelor and Master of Science from Tribhuvan University 
      with a major in Physics. In 2019, I received my Masters of Science in Physics from the University of
      Texas at El Paso. I am currently a Ph.D. candidate in the Computational Science Program at the University of Texas at El Paso (UTEP).</p>
 
@@ -250,7 +245,6 @@
     <span class="dot"></span>
     <span class="dot"></span>
   </div>
-</div>
 </div>
 
 <footer>
