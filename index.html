@@ -16,10 +16,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 1.5vw 4vw; /* Adjusted padding using viewport units */
     background-color: #000; /* Black background color */
     color: #fff; /* White text color */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for a bit of depth */
+    box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.1); /* Adjusted box shadow using viewport units */
   }
 
   #profile-details {
@@ -28,7 +28,7 @@
   }
 
   #profile-name {
-    font-size: 32px; /* Increased font size */
+    font-size: 4vw; /* Adjusted font size using viewport units */
   }
 
   .main-name {
@@ -36,7 +36,7 @@
   }
 
   .position {
-    font-size: 15px; /* 50% smaller */
+    font-size: 1.5vw; /* Adjusted font size using viewport units */
   }
 
   #menu-icon {
@@ -52,23 +52,21 @@
 
   nav ul li {
     display: inline-block;
-    margin-left: 20px;
+    margin-left: 4vw; /* Adjusted margin using viewport units */
   }
 
   #middle-section {
     text-align: justify; /* Justify text between margins */
-    padding: 20px;
+    padding: 4vw; /* Adjusted padding using viewport units */
     margin: 0 auto; /* Center content horizontally */
-    max-width: 100%;
-    box-sizing: border-box;
   }
 
   #animation-container {
-    padding: 20px;
-    max-width: 100%; /* Adjust width as needed */
+    padding: 4vw; /* Adjusted padding using viewport units */
+    margin: 0 auto;
+    max-width: 80vw; /* Adjusted max-width using viewport units */
     background-color: #fff; /* Light grey background */
     opacity: 0.75; /* Opacity for light orange background */
-    box-sizing: border-box;
   }
 
   #animation {
@@ -76,7 +74,7 @@
   }
 
   .mySlides img {
-    width: 100%; /* Set photos to 100% width */
+    width: 75%; /* Set photos to 75% width */
   }
   
   .text {
@@ -85,20 +83,19 @@
 
   footer {
     background-color: #000; /* Black background color */
-    padding: 20px;
+    padding: 2vw 4vw;
     text-align: center;
     border-top: none; /* Remove border */
     color: #fff; /* White text color */
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    box-sizing: border-box;
   }
 
   footer a, footer p {
     color: #fff; /* White text color */
     text-decoration: none;
-    margin: 0 10px;
+    margin: 0 2vw; /* Adjusted margin using viewport units */
     font-size: 70%; /* Reduce font size by 30% */
   }
 
@@ -108,20 +105,20 @@
   }
 
   .footer-links a {
-    margin-right: 10px; /* Adjust margin as needed */
+    margin-right: 2vw; /* Adjust margin as needed */
   }
 
   .footer-links img {
-    margin-right: 10px; /* Adjust margin as needed */
+    margin-right: 2vw; /* Adjust margin as needed */
   }
 
   /* Styles for CV box */
   .cv-box {
     display: inline-block;
-    padding: 3px 8px;
+    padding: 0.5vw 1.5vw; /* Adjusted padding using viewport units */
     background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 0.1vw solid #ccc; /* Adjusted border using viewport units */
+    border-radius: 0.5vw; /* Adjusted border radius using viewport units */
     text-align: center;
   }
 
@@ -138,20 +135,28 @@
     nav ul {
       display: none;
       position: absolute;
-      top: 60px;
-      right: 10px;
+      top: 5vw;
+      right: 4vw;
       background-color: rgba(255, 218, 185, 0.75); /* Adjusted light orange background */
-      padding: 10px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for consistency */
+      padding: 1vw;
+      box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.1); /* Shadow for consistency */
     }
 
     nav ul li {
       display: block;
-      margin: 10px 0;
+      margin: 2vw 0;
     }
 
-    nav ul.active {
-      display: block;
+    .mySlides img {
+      width: 100%; /* Set photos to 100% width on smaller screens */
+    }
+
+    footer {
+      padding: 1vw 2vw; /* Adjusted padding using viewport units */
+    }
+
+    footer a, footer p {
+      margin: 0 1vw; /* Adjusted margin using viewport units */
     }
   }
 </style>
@@ -184,7 +189,7 @@
 <img src="./index_files/award.jpg" style="width:100%">
   <div class="text">Excellence award (2019), Physics Department, UTEP</div>
 </div>
-  
+    
 <div class="mySlides fade">
   <div class="numbertext">2 / 8</div>
   <img src="./index_files/lab1.jpg" style="width:100%">
@@ -202,13 +207,13 @@
   <img src="./index_files/fam2.jpeg" style="width:100%">
   <div class="text">My family members (my son was sleeping :P) </div>
 </div>
-  
+    
 <div class="mySlides fade">
   <div class="numbertext">5 / 8</div>
   <img src="./index_files/lab.JPG" style="width:100%">
   <div class="text">Lunch with my research advisor & lab members</div>
 </div>
-  
+    
 <div class="mySlides fade">
   <div class="numbertext">6 / 8</div>
   <img src="./index_files/graduation1.JPG" style="width:100%">
@@ -246,13 +251,13 @@
   <div class="footer-links">
     <!-- <li><a href="https://kcbimal.github.io/course.html" target="_self">Courses</a></li> --> 
     <a href="https://scholar.google.com/citations?hl=en&user=fSqUY48AAAAJ" target="_self">
-      <img src="https://scholar.google.com/favicon.ico" alt="Google Scholar" style="width: 25px; height: 25px;">
+      <img src="https://scholar.google.com/favicon.ico" alt="Google Scholar" style="width: 3vw; height: 3vw;">
     </a>
     <a href="https://www.linkedin.com/in/bimal-k-c-8a5775112/" target="_self">
-      <img src="https://www.linkedin.com/favicon.ico" alt="LinkedIn" style="width: 25px; height: 25px;">
+      <img src="https://www.linkedin.com/favicon.ico" alt="LinkedIn" style="width: 3vw; height: 3vw;">
     </a>
     <a href="https://github.com/kcbimal" target="_self">
-      <img src="https://github.com/favicon.ico" alt="GitHub" style="width: 25px; height: 25px;">
+      <img src="https://github.com/favicon.ico" alt="GitHub" style="width: 3vw; height: 3vw;">
     </a>
   </div>
   <p>Contact: bkc@miners.utep.edu</p>
