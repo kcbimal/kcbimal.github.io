@@ -16,7 +16,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    padding: 10px 20px;
     background-color: #000; /* Black background color */
     color: #fff; /* White text color */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for a bit of depth */
@@ -28,7 +28,7 @@
   }
 
   #profile-name {
-    font-size: 3vw; /* Adjusted to viewport width */
+    font-size: 32px; /* Increased font size */
   }
 
   .main-name {
@@ -36,7 +36,7 @@
   }
 
   .position {
-    font-size: 1.5vw; /* Adjusted to viewport width */
+    font-size: 15px; /* 50% smaller */
   }
 
   #menu-icon {
@@ -57,19 +57,22 @@
 
   #middle-section {
     text-align: justify; /* Justify text between margins */
-    padding: 2vw;
+    padding: 20px;
     margin: 0 auto; /* Center content horizontally */
-    max-width: 100vw; /* Adjusted to viewport width */
-    box-sizing: border-box; /* Include padding and border in the width */
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
   #animation-container {
-    padding: 2vw;
-    margin: 0 auto;
-    max-width: 100vw; /* Adjusted to viewport width */
+    padding: 20px;
+    max-width: 100%; /* Adjust width as needed */
     background-color: #fff; /* Light grey background */
     opacity: 0.75; /* Opacity for light orange background */
-    box-sizing: border-box; /* Include padding and border in the width */
+    box-sizing: border-box;
+  }
+
+  #animation {
+    width: 100%; /* Expand to full width */
   }
 
   .mySlides img {
@@ -77,26 +80,26 @@
   }
   
   .text {
-    font-size: 0.85vw; /* Adjusted to viewport width */
+    font-size: 85%; /* Reduce caption size by 35% */
   }
 
   footer {
     background-color: #000; /* Black background color */
-    padding: 2vw;
+    padding: 20px;
     text-align: center;
     border-top: none; /* Remove border */
     color: #fff; /* White text color */
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    box-sizing: border-box;
   }
 
-  footer a,
-  footer p {
+  footer a, footer p {
     color: #fff; /* White text color */
     text-decoration: none;
-    margin: 0 1vw; /* Adjusted to viewport width */
-    font-size: 0.7vw; /* Adjusted to viewport width */
+    margin: 0 10px;
+    font-size: 70%; /* Reduce font size by 30% */
   }
 
   .footer-links {
@@ -105,20 +108,20 @@
   }
 
   .footer-links a {
-    margin-right: 1vw; /* Adjusted to viewport width */
+    margin-right: 10px; /* Adjust margin as needed */
   }
 
   .footer-links img {
-    margin-right: 1vw; /* Adjusted to viewport width */
+    margin-right: 10px; /* Adjust margin as needed */
   }
 
   /* Styles for CV box */
   .cv-box {
     display: inline-block;
-    padding: 0.3vw 0.8vw; /* Adjusted to viewport width */
+    padding: 3px 8px;
     background-color: #fff;
-    border: 0.1vw solid #ccc; /* Adjusted to viewport width */
-    border-radius: 0.5vw; /* Adjusted to viewport width */
+    border: 1px solid #ccc;
+    border-radius: 5px;
     text-align: center;
   }
 
@@ -127,7 +130,7 @@
     color: #000; /* Black text color */
   }
 
-  @media (max-width: 768px) {
+  @media(max-width: 768px) {
     #menu-icon {
       display: block;
     }
@@ -150,10 +153,6 @@
     nav ul.active {
       display: block;
     }
-
-    .mySlides img {
-      width: 100%; /* Set photos to 100% width on smaller screens */
-    }
   }
 </style>
 </head>
@@ -175,8 +174,8 @@
 
 <div id="middle-section">
  <p>I am born and raised in Nepal. I received my Bachelor and Master of Science from Tribhuvan University 
-	 with a major in Physics. In 2019, I received my Masters of Science in Physics from the University of
-	 Texas at El Paso. I am currently a Ph.D. candidate in the Computational Science Program at the University of Texas at El Paso (UTEP).</p>
+     with a major in Physics. In 2019, I received my Masters of Science in Physics from the University of
+     Texas at El Paso. I am currently a Ph.D. candidate in the Computational Science Program at the University of Texas at El Paso (UTEP).</p>
 
   <div id="animation-container" class="slideshow-container">
     <div id="animation">
@@ -185,7 +184,7 @@
 <img src="./index_files/award.jpg" style="width:100%">
   <div class="text">Excellence award (2019), Physics Department, UTEP</div>
 </div>
-	
+  
 <div class="mySlides fade">
   <div class="numbertext">2 / 8</div>
   <img src="./index_files/lab1.jpg" style="width:100%">
@@ -203,13 +202,13 @@
   <img src="./index_files/fam2.jpeg" style="width:100%">
   <div class="text">My family members (my son was sleeping :P) </div>
 </div>
-	
+  
 <div class="mySlides fade">
   <div class="numbertext">5 / 8</div>
   <img src="./index_files/lab.JPG" style="width:100%">
   <div class="text">Lunch with my research advisor & lab members</div>
 </div>
-	
+  
 <div class="mySlides fade">
   <div class="numbertext">6 / 8</div>
   <img src="./index_files/graduation1.JPG" style="width:100%">
@@ -247,13 +246,13 @@
   <div class="footer-links">
     <!-- <li><a href="https://kcbimal.github.io/course.html" target="_self">Courses</a></li> --> 
     <a href="https://scholar.google.com/citations?hl=en&user=fSqUY48AAAAJ" target="_self">
-      <img src="https://scholar.google.com/favicon.ico" alt="Google Scholar" style="width: 2.5vw; height: 2.5vw;">
+      <img src="https://scholar.google.com/favicon.ico" alt="Google Scholar" style="width: 25px; height: 25px;">
     </a>
     <a href="https://www.linkedin.com/in/bimal-k-c-8a5775112/" target="_self">
-      <img src="https://www.linkedin.com/favicon.ico" alt="LinkedIn" style="width: 2.5vw; height: 2.5vw;">
+      <img src="https://www.linkedin.com/favicon.ico" alt="LinkedIn" style="width: 25px; height: 25px;">
     </a>
     <a href="https://github.com/kcbimal" target="_self">
-      <img src="https://github.com/favicon.ico" alt="GitHub" style="width: 2.5vw; height: 2.5vw;">
+      <img src="https://github.com/favicon.ico" alt="GitHub" style="width: 25px; height: 25px;">
     </a>
   </div>
   <p>Contact: bkc@miners.utep.edu</p>
