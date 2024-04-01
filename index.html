@@ -61,10 +61,16 @@
     margin: 0 auto; /* Center content horizontally */
   }
 
-  #animation {
-    width: 100%; /* Expand to full width */
+  #animation-container {
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 800px; /* Adjust width as needed */
     background-color: #fff; /* Light grey background */
     opacity: 0.75; /* Opacity for light orange background */
+  }
+
+  #animation {
+    width: 100%; /* Expand to full width */
   }
 
   .mySlides img {
@@ -171,53 +177,15 @@
 <div id="middle-section">
  <p>I am born and raised in Nepal. I received my Bachelor and Master of Science from Tribhuvan University with a major in Physics. In 2019, I received my Masters of Science in Physics from the University of Texas at El Paso. I am currently a Ph.D. candidate in the Computational Science Program at the University of Texas at El Paso (UTEP).</p>
 
-  <div id="animation" class="slideshow-container">
-    <div class="mySlides fade">
-      <div class="numbertext"></div>
-      <img src="./index_files/award.jpg" style="width:75%">
-      <div class="text">Excellence award (2019), Physics Department, UTEP</div>
-    </div>
-    
-    <div class="mySlides fade">
-      <div class="numbertext"></div>
-      <img src="./index_files/lab1.jpg" style="width:75%">
-      <div class="text">Dr. Jorge research group members: Enjoying indoor skydiving @ifly</div>
-    </div>
-
-    <div class="mySlides fade">
-      <div class="numbertext"></div>
-      <img src="./index_files/fam1.jpg" style="width:75%">
-      <div class="text">My sweet family and my inspirations</div>
-    </div>
-
-    <div class="mySlides fade">
-      <div class="numbertext"></div>
-      <img src="./index_files/fam2.jpeg" style="width:75%">
-      <div class="text">My family members (my son was sleeping :P) </div>
-    </div>
-
-    <div class="mySlides fade">
-      <div class="numbertext"></div>
-      <img src="./index_files/lab.JPG" style="width:75%">
-      <div class="text">Lunch with my research advisor & lab members</div>
-    </div>
-
-    <div class="mySlides fade">
-      <div class="numbertext"></div>
-      <img src="./index_files/graduation1.JPG" style="width:75%">
-      <div class="text">MS graduation ceremony (UTEP). Dec 15 2019</div>
-    </div>
-
-    <div class="mySlides fade">
-      <div class="numbertext"></div>
-      <img src="./index_files/ta.jpg" style="width:75%">
-      <div class="text">Outstanding Achievement Award: Better Rated by Students (2019)</div>
-    </div>
-
-    <div class="mySlides fade">
-      <div class="numbertext"></div>
-      <img src="./index_files/aps.jpeg" style="width:75%">
-      <div class="text">APS March Meeting 2024, Minneapolis, MN </div>
+  <div id="animation-container" class="slideshow-container">
+    <div id="animation">
+      <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <img src="./index_files/award.jpg" style="width:75%">
+        <div class="text">Excellence award (2019), Physics Department, UTEP</div>
+      </div>
+      
+      <!-- Add more slides as needed -->
     </div>
   </div>
   <br>
