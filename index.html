@@ -16,10 +16,27 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5vw 4vw; /* Adjusted padding using viewport units */
-    background-color: #000; /* Black background color */
-    color: #fff; /* White text color */
-    box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.1); /* Adjusted box shadow using viewport units */
+    padding: 1.275vw 4vw; /* Decreased padding by 15% */
+    background-color: #000;
+    color: #fff;
+    box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.1);
+  }
+
+  .cv-box {
+    padding: 0.5vw 1vw; /* Adjust padding as needed */
+    border: 2px solid #fff; /* Add border */
+    border-radius: 0.5vw; /* Add border radius */
+    text-decoration: none;
+    color: #fff;
+  }
+
+  .cv-box:hover {
+    background-color: #fff;
+    color: #000;
+  }
+
+  .cv-box:active {
+    transform: translateY(2px);
   }
 
   #profile-details {
@@ -28,7 +45,7 @@
   }
 
   #profile-name {
-    font-size: 4vw; /* Adjusted font size using viewport units */
+    font-size: 4vw;
   }
 
   .main-name {
@@ -36,7 +53,7 @@
   }
 
   .position {
-    font-size: 1.5vw; /* Adjusted font size using viewport units */
+    font-size: 1.5vw;
   }
 
   #menu-icon {
@@ -52,20 +69,20 @@
 
   nav ul li {
     display: inline-block;
-    margin-left: 4vw; /* Adjusted margin using viewport units */
+    margin-left: 4vw;
   }
 
   #middle-section {
-    text-align: justify; /* Justify text between margins */
-    padding: 4vw; /* Adjusted padding using viewport units */
-    margin: 0 auto; /* Center content horizontally */
+    text-align: justify;
+    padding: 4vw;
+    margin: 0 auto;
   }
 
   /* Animation styles */
   .slideshow-container {
     max-width: 100%;
     position: relative;
-    margin-top: 4vw; /* Adjusted margin using viewport units */
+    margin-top: 4vw;
   }
 
   .mySlides {
@@ -79,19 +96,19 @@
   .text {
     text-align: center;
     color: #000;
-    font-size: 1.5vw; /* Adjusted font size using viewport units */
-    margin-top: 1vw; /* Adjusted margin using viewport units */
+    font-size: 1.5vw;
+    margin-top: 1vw;
   }
 
   .numbertext {
     color: #000;
-    font-size: 1.2vw; /* Adjusted font size using viewport units */
+    font-size: 1.2vw;
   }
 
   .dot {
-    height: 1vw; /* Adjusted height using viewport units */
-    width: 1vw; /* Adjusted width using viewport units */
-    margin: 0 0.5vw; /* Adjusted margin using viewport units */
+    height: 1vw;
+    width: 1vw;
+    margin: 0 0.5vw;
     background-color: #bbb;
     border-radius: 50%;
     display: inline-block;
@@ -103,21 +120,21 @@
   }
 
   footer {
-    background-color: #000; /* Black background color */
+    background-color: #000;
     padding: 2vw 4vw;
     text-align: center;
-    border-top: none; /* Remove border */
-    color: #fff; /* White text color */
+    border-top: none;
+    color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
   }
 
   footer a, footer p {
-    color: #fff; /* White text color */
+    color: #fff;
     text-decoration: none;
-    margin: 0 2vw; /* Adjusted margin using viewport units */
-    font-size: 70%; /* Reduce font size by 30% */
+    margin: 0 2vw;
+    font-size: 70%;
   }
 
   .footer-links {
@@ -126,11 +143,11 @@
   }
 
   .footer-links a {
-    margin-right: 2vw; /* Adjust margin as needed */
+    margin-right: 2vw;
   }
 
   .footer-links img {
-    margin-right: 2vw; /* Adjust margin as needed */
+    margin-right: 2vw;
   }
 
   @media(max-width: 768px) {
@@ -143,9 +160,9 @@
       position: absolute;
       top: 5vw;
       right: 4vw;
-      background-color: rgba(255, 218, 185, 0.75); /* Adjusted light orange background */
+      background-color: rgba(255, 218, 185, 0.75);
       padding: 1vw;
-      box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.1); /* Shadow for consistency */
+      box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.1);
     }
 
     nav ul li {
@@ -154,18 +171,18 @@
     }
 
     .text {
-      font-size: 4vw; /* Adjusted font size using viewport units */
-      margin-top: 2vw; /* Adjusted margin using viewport units */
+      font-size: 4vw;
+      margin-top: 2vw;
     }
 
     .numbertext {
-      font-size: 3vw; /* Adjusted font size using viewport units */
+      font-size: 3vw;
     }
 
     .dot {
-      height: 2vw; /* Adjusted height using viewport units */
-      width: 2vw; /* Adjusted width using viewport units */
-      margin: 0 1vw; /* Adjusted margin using viewport units */
+      height: 2vw;
+      width: 2vw;
+      margin: 0 1vw;
     }
   }
 </style>
