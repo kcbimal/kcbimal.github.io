@@ -112,19 +112,36 @@
     margin-right: 2vw; /* Adjust margin as needed */
   }
 
-  /* Styles for CV box */
-  .cv-box {
-    display: inline-block;
-    padding: 0.5vw 1.5vw; /* Adjusted padding using viewport units */
-    background-color: #fff;
-    border: 0.1vw solid #ccc; /* Adjusted border using viewport units */
-    border-radius: 0.5vw; /* Adjusted border radius using viewport units */
+  /* Additional styles for the second footer */
+  footer.second-footer {
+    background-color: #ffcccc; /* Light red background color */
+    padding: 2vw 4vw;
     text-align: center;
+    border-top: none; /* Remove border */
+    color: #000; /* Black text color */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
   }
 
-  .cv-box a {
-    text-decoration: none;
+  footer.second-footer a, footer.second-footer p {
     color: #000; /* Black text color */
+    text-decoration: none;
+    margin: 0 2vw; /* Adjusted margin using viewport units */
+    font-size: 70%; /* Reduce font size by 30% */
+  }
+
+  .second-footer-links {
+    display: flex;
+    align-items: center;
+  }
+
+  .second-footer-links a {
+    margin-right: 2vw; /* Adjust margin as needed */
+  }
+
+  .second-footer-links img {
+    margin-right: 2vw; /* Adjust margin as needed */
   }
 
   @media(max-width: 768px) {
@@ -250,6 +267,21 @@
 <footer>
   <div class="footer-links">
     <!-- <li><a href="https://kcbimal.github.io/course.html" target="_self">Courses</a></li> --> 
+    <a href="https://scholar.google.com/citations?hl=en&user=fSqUY48AAAAJ" target="_self">
+      <img src="https://scholar.google.com/favicon.ico" alt="Google Scholar" style="width: 3vw; height: 3vw;">
+    </a>
+    <a href="https://www.linkedin.com/in/bimal-k-c-8a5775112/" target="_self">
+      <img src="https://www.linkedin.com/favicon.ico" alt="LinkedIn" style="width: 3vw; height: 3vw;">
+    </a>
+    <a href="https://github.com/kcbimal" target="_self">
+      <img src="https://github.com/favicon.ico" alt="GitHub" style="width: 3vw; height: 3vw;">
+    </a>
+  </div>
+  <p>Contact: bkc@miners.utep.edu</p>
+</footer>
+
+<footer class="second-footer">
+  <div class="second-footer-links">
     <a href="https://scholar.google.com/citations?hl=en&user=fSqUY48AAAAJ" target="_self">
       <img src="https://scholar.google.com/favicon.ico" alt="Google Scholar" style="width: 3vw; height: 3vw;">
     </a>
