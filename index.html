@@ -61,35 +61,45 @@
     margin: 0 auto; /* Center content horizontally */
   }
 
-  footer {
-    background-color: #000; /* Black background color */
-    padding: 2vw 4vw;
+  /* Animation styles */
+  .slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin-top: 4vw; /* Adjusted margin using viewport units */
+  }
+
+  .mySlides {
+    display: none;
+  }
+
+  .mySlides img {
+    width: 100%;
+  }
+
+  .text {
     text-align: center;
-    border-top: none; /* Remove border */
-    color: #fff; /* White text color */
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+    color: #000;
+    font-size: 1.5vw; /* Adjusted font size using viewport units */
+    margin-top: 1vw; /* Adjusted margin using viewport units */
   }
 
-  footer a, footer p {
-    color: #fff; /* White text color */
-    text-decoration: none;
-    margin: 0 2vw; /* Adjusted margin using viewport units */
-    font-size: 70%; /* Reduce font size by 30% */
+  .numbertext {
+    color: #000;
+    font-size: 1.2vw; /* Adjusted font size using viewport units */
   }
 
-  .footer-links {
-    display: flex;
-    align-items: center;
+  .dot {
+    height: 1vw; /* Adjusted height using viewport units */
+    width: 1vw; /* Adjusted width using viewport units */
+    margin: 0 0.5vw; /* Adjusted margin using viewport units */
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
   }
 
-  .footer-links a {
-    margin-right: 2vw; /* Adjust margin as needed */
-  }
-
-  .footer-links img {
-    margin-right: 2vw; /* Adjust margin as needed */
+  .active {
+    background-color: #717171;
   }
 
   @media(max-width: 768px) {
@@ -110,6 +120,21 @@
     nav ul li {
       display: block;
       margin: 2vw 0;
+    }
+
+    .text {
+      font-size: 4vw; /* Adjusted font size using viewport units */
+      margin-top: 2vw; /* Adjusted margin using viewport units */
+    }
+
+    .numbertext {
+      font-size: 3vw; /* Adjusted font size using viewport units */
+    }
+
+    .dot {
+      height: 2vw; /* Adjusted height using viewport units */
+      width: 2vw; /* Adjusted width using viewport units */
+      margin: 0 1vw; /* Adjusted margin using viewport units */
     }
   }
 </style>
@@ -134,27 +159,87 @@
  <p>I am born and raised in Nepal. I received my Bachelor and Master of Science from Tribhuvan University 
      with a major in Physics. In 2019, I received my Masters of Science in Physics from the University of
      Texas at El Paso. I am currently a Ph.D. candidate in the Computational Science Program at the University of Texas at El Paso (UTEP).</p>
-</div>
 
-<footer>
-  <div class="footer-links">
-    <a href="https://scholar.google.com/citations?hl=en&user=fSqUY48AAAAJ" target="_self">
-      <img src="https://scholar.google.com/favicon.ico" alt="Google Scholar" style="width: 3vw; height: 3vw;">
-    </a>
-    <a href="https://www.linkedin.com/in/bimal-k-c-8a5775112/" target="_self">
-      <img src="https://www.linkedin.com/favicon.ico" alt="LinkedIn" style="width: 3vw; height: 3vw;">
-    </a>
-    <a href="https://github.com/kcbimal" target="_self">
-      <img src="https://github.com/favicon.ico" alt="GitHub" style="width: 3vw; height: 3vw;">
-    </a>
+ <div class="slideshow-container">
+    <div class="mySlides fade">
+      <img src="./index_files/award.jpg" style="width:100%">
+      <div class="text">Excellence award (2019), Physics Department, UTEP</div>
+    </div>
+    
+    <div class="mySlides fade">
+      <img src="./index_files/lab1.jpg" style="width:100%">
+      <div class="text">Dr. Jorge research group members: Enjoying indoor skydiving @ifly</div>
+    </div>
+
+    <div class="mySlides fade">
+      <img src="./index_files/fam1.jpg" style="width:100%">
+      <div class="text">My sweet family and my inspiratons</div>
+    </div>
+
+    <div class="mySlides fade">
+      <img src="./index_files/fam2.jpeg" style="width:100%">
+      <div class="text">My family members (my son was sleeping :P)</div>
+    </div>
+    
+    <div class="mySlides fade">
+      <img src="./index_files/lab.JPG" style="width:100%">
+      <div class="text">Lunch with my research advisor & lab members</div>
+    </div>
+    
+    <div class="mySlides fade">
+      <img src="./index_files/graduation1.JPG" style="width:100%">
+      <div class="text">MS graduation ceremony (UTEP). Dec 15 2019</div>
+    </div>
+
+    <div class="mySlides fade">
+      <img src="./index_files/ta.jpg" style="width:100%">
+      <div class="text">Outstanding Achievement Award: Better Rated by Students (2019)</div>
+    </div>
+
+    <div class="mySlides fade">
+      <img src="./index_files/aps.jpeg" style="width:100%">
+      <div class="text">APS March Meeting 2024, Minneapolis, MN</div>
+    </div>
+    
+    <br>
+
+    <div style="text-align:center">
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
   </div>
-  <p>Contact: bkc@miners.utep.edu</p>
-</footer>
+</div>
 
 <script>
   document.getElementById('menu-icon').addEventListener('click', function() {
     document.querySelector('nav ul').classList.toggle('active');
   });
+
+  let slideIndex = 0;
+  showSlides();
+
+  function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 3000); // Change image every 3 seconds
+  }
 </script>
 </body>
 </html>
