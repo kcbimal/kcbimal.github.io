@@ -61,17 +61,35 @@
     margin: 0 auto; /* Center content horizontally */
   }
 
-  /* Styles for CV box */
-  .cv-box {
-    display: inline-block;
-    padding: 1vw 2vw; /* Adjusted padding using viewport units */
-    background-color: #fff;
-    border: 0.1vw solid #000; /* Adjusted border using viewport units */
-    border-radius: 0.5vw; /* Adjusted border radius using viewport units */
+  footer {
+    background-color: #000; /* Black background color */
+    padding: 2vw 4vw;
     text-align: center;
-    color: #000; /* Black text color */
+    border-top: none; /* Remove border */
+    color: #fff; /* White text color */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  footer a, footer p {
+    color: #fff; /* White text color */
     text-decoration: none;
-    font-size: 1.5vw; /* Adjusted font size using viewport units */
+    margin: 0 2vw; /* Adjusted margin using viewport units */
+    font-size: 70%; /* Reduce font size by 30% */
+  }
+
+  .footer-links {
+    display: flex;
+    align-items: center;
+  }
+
+  .footer-links a {
+    margin-right: 2vw; /* Adjust margin as needed */
+  }
+
+  .footer-links img {
+    margin-right: 2vw; /* Adjust margin as needed */
   }
 
   @media(max-width: 768px) {
@@ -117,6 +135,21 @@
      with a major in Physics. In 2019, I received my Masters of Science in Physics from the University of
      Texas at El Paso. I am currently a Ph.D. candidate in the Computational Science Program at the University of Texas at El Paso (UTEP).</p>
 </div>
+
+<footer>
+  <div class="footer-links">
+    <a href="https://scholar.google.com/citations?hl=en&user=fSqUY48AAAAJ" target="_self">
+      <img src="https://scholar.google.com/favicon.ico" alt="Google Scholar" style="width: 3vw; height: 3vw;">
+    </a>
+    <a href="https://www.linkedin.com/in/bimal-k-c-8a5775112/" target="_self">
+      <img src="https://www.linkedin.com/favicon.ico" alt="LinkedIn" style="width: 3vw; height: 3vw;">
+    </a>
+    <a href="https://github.com/kcbimal" target="_self">
+      <img src="https://github.com/favicon.ico" alt="GitHub" style="width: 3vw; height: 3vw;">
+    </a>
+  </div>
+  <p>Contact: bkc@miners.utep.edu</p>
+</footer>
 
 <script>
   document.getElementById('menu-icon').addEventListener('click', function() {
