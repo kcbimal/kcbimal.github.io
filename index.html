@@ -61,87 +61,17 @@
     margin: 0 auto; /* Center content horizontally */
   }
 
-  #animation-container {
-    padding: 4vw; /* Adjusted padding using viewport units */
-    margin: 0 auto;
-    max-width: 80vw; /* Adjusted max-width using viewport units */
-    background-color: #fff; /* Light grey background */
-    opacity: 0.75; /* Opacity for light orange background */
-  }
-
-  #animation {
-    width: 100%; /* Expand to full width */
-  }
-
-  .mySlides img {
-    width: 75%; /* Set photos to 75% width */
-  }
-  
-  .text {
-    font-size: 85%; /* Reduce caption size by 35% */
-  }
-
-  footer {
-    background-color: #000; /* Black background color */
-    padding: 2vw 4vw;
+  /* Styles for CV box */
+  .cv-box {
+    display: inline-block;
+    padding: 1vw 2vw; /* Adjusted padding using viewport units */
+    background-color: #fff;
+    border: 0.1vw solid #000; /* Adjusted border using viewport units */
+    border-radius: 0.5vw; /* Adjusted border radius using viewport units */
     text-align: center;
-    border-top: none; /* Remove border */
-    color: #fff; /* White text color */
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-  }
-
-  footer a, footer p {
-    color: #fff; /* White text color */
+    color: #000; /* Black text color */
     text-decoration: none;
-    margin: 0 2vw; /* Adjusted margin using viewport units */
-    font-size: 70%; /* Reduce font size by 30% */
-  }
-
-  .footer-links {
-    display: flex;
-    align-items: center;
-  }
-
-  .footer-links a {
-    margin-right: 2vw; /* Adjust margin as needed */
-  }
-
-  .footer-links img {
-    margin-right: 2vw; /* Adjust margin as needed */
-  }
-
-  /* Styles for the black footer */
-  .black-footer {
-    background-color: #000; /* Black background color */
-    padding: 2vw 4vw;
-    text-align: center;
-    border-top: none; /* Remove border */
-    color: #fff; /* White text color */
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-  }
-
-  .black-footer a, .black-footer p {
-    color: #fff; /* White text color */
-    text-decoration: none;
-    margin: 0 2vw; /* Adjusted margin using viewport units */
-    font-size: 70%; /* Reduce font size by 30% */
-  }
-
-  .black-footer-links {
-    display: flex;
-    align-items: center;
-  }
-
-  .black-footer-links a {
-    margin-right: 2vw; /* Adjust margin as needed */
-  }
-
-  .black-footer-links img {
-    margin-right: 2vw; /* Adjust margin as needed */
+    font-size: 1.5vw; /* Adjusted font size using viewport units */
   }
 
   @media(max-width: 768px) {
@@ -163,18 +93,6 @@
       display: block;
       margin: 2vw 0;
     }
-
-    .mySlides img {
-      width: 100%; /* Set photos to 100% width on smaller screens */
-    }
-
-    footer {
-      padding: 1vw 2vw; /* Adjusted padding using viewport units */
-    }
-
-    footer a, footer p {
-      margin: 0 1vw; /* Adjusted margin using viewport units */
-    }
   }
 </style>
 </head>
@@ -188,7 +106,7 @@
     </div>
     <nav>
       <ul>
-        <li><div class="cv-box"><a href="index_files/cvv.pdf" target="_self">My CV</a></div></li>
+        <li><a href="#" class="cv-box">My CV</a></li>
       </ul>
     </nav>
     <div id="menu-icon">&#9776;</div>
@@ -198,134 +116,12 @@
  <p>I am born and raised in Nepal. I received my Bachelor and Master of Science from Tribhuvan University 
      with a major in Physics. In 2019, I received my Masters of Science in Physics from the University of
      Texas at El Paso. I am currently a Ph.D. candidate in the Computational Science Program at the University of Texas at El Paso (UTEP).</p>
-
-  <div id="animation-container" class="slideshow-container">
-    <div id="animation">
-      <div class="mySlides fade">
-        <!-- Remove counter -->
-<img src="./index_files/award.jpg" style="width:100%">
-  <div class="text">Excellence award (2019), Physics Department, UTEP</div>
 </div>
-    
-<div class="mySlides fade">
-  <div class="numbertext">2 / 8</div>
-  <img src="./index_files/lab1.jpg" style="width:100%">
-  <div class="text">Dr. Jorge research group members: Enjoying indoor skydiving @ifly</div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">3 / 8</div>
-  <img src="./index_files/fam1.jpg" style="width:100%">
-  <div class="text">My sweet family and my inspiratons</div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">4 / 8</div>
-  <img src="./index_files/fam2.jpeg" style="width:100%">
-  <div class="text">My family members (my son was sleeping :P) </div>
-</div>
-    
-<div class="mySlides fade">
-  <div class="numbertext">5 / 8</div>
-  <img src="./index_files/lab.JPG" style="width:100%">
-  <div class="text">Lunch with my research advisor & lab members</div>
-</div>
-    
-<div class="mySlides fade">
-  <div class="numbertext">6 / 8</div>
-  <img src="./index_files/graduation1.JPG" style="width:100%">
-  <div class="text">MS graduation ceremony (UTEP). Dec 15 2019</div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">7 / 8</div>
-  <img src="./index_files/ta.jpg" style="width:100%">
-  <div class="text">Outstanding Achievement Award: Better Rated by Students (2019)</div>
-</div>
-
-
-<div class="mySlides fade">
-  <div class="numbertext">8 / 8</div>
-  <img src="./index_files/aps.jpeg" style="width:100%">
-  <div class="text">APS March Meeting 2024, Minneapolis, MN 
-    </div>
-  </div>
-  <br>
-
-  <div style="text-align:center">
-    <span class="dot"></span> 
-    <span class="dot"></span> 
-    <span class="dot"></span> 
-    <span class="dot"></span> 
-    <span class="dot"></span> 
-    <span class="dot"></span> 
-    <span class="dot"></span>
-    <span class="dot"></span>
-  </div>
-</div>
-
-<footer>
-  <div class="footer-links">
-    <!-- <li><a href="https://kcbimal.github.io/course.html" target="_self">Courses</a></li> --> 
-    <a href="https://scholar.google.com/citations?hl=en&user=fSqUY48AAAAJ" target="_self">
-      <img src="https://scholar.google.com/favicon.ico" alt="Google Scholar" style="width: 3vw; height: 3vw;">
-    </a>
-    <a href="https://www.linkedin.com/in/bimal-k-c-8a5775112/" target="_self">
-      <img src="https://www.linkedin.com/favicon.ico" alt="LinkedIn" style="width: 3vw; height: 3vw;">
-    </a>
-    <a href="https://github.com/kcbimal" target="_self">
-      <img src="https://github.com/favicon.ico" alt="GitHub" style="width: 3vw; height: 3vw;">
-    </a>
-  </div>
-  <p>Contact: bkc@miners.utep.edu</p>
-</footer>
-
-<footer class="black-footer">
-  <div class="black-footer-links">
-    <a href="https://scholar.google.com/citations?hl=en&user=fSqUY48AAAAJ" target="_self">
-      <img src="https://scholar.google.com/favicon.ico" alt="Google Scholar" style="width: 3vw; height: 3vw;">
-    </a>
-    <a href="https://www.linkedin.com/in/bimal-k-c-8a5775112/" target="_self">
-      <img src="https://www.linkedin.com/favicon.ico" alt="LinkedIn" style="width: 3vw; height: 3vw;">
-    </a>
-    <a href="https://github.com/kcbimal" target="_self">
-      <img src="https://github.com/favicon.ico" alt="GitHub" style="width: 3vw; height: 3vw;">
-    </a>
-  </div>
-  <p>Contact: bkc@miners.utep.edu</p>
-</footer>
 
 <script>
   document.getElementById('menu-icon').addEventListener('click', function() {
     document.querySelector('nav ul').classList.toggle('active');
   });
-
-  let slideIndex = 0;
-  showSlides();
-
-  function showSlides() {
-    let i;
-    let slides = document.getElementsByClassName("mySlides");
-    let dots = document.getElementsByClassName("dot");
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}    
-    for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";  
-    dots[slideIndex-1].className += " active";
-    
-    // Update slide numbers
-    let slideNumbers = document.getElementsByClassName("numbertext");
-    for (i = 0; i < slideNumbers.length; i++) {
-      slideNumbers[i].innerText = slideIndex + " / " + slides.length;
-    }
-    
-    setTimeout(showSlides, 3000); // Change image every 3 seconds
-  }
 </script>
 </body>
 </html>
