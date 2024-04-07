@@ -12,189 +12,11 @@
     background-color: #f2f2f2; /* Original background color */
   }
 
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.275vw 4vw; /* Decreased padding by 15% */
-    background-color: #000;
-    color: #fff;
-    box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.1);
-  }
+  /* Your existing CSS styles here */
 
-  .cv-box {
-    padding: 0.5vw 1vw; /* Adjust padding as needed */
-    border: 2px solid #fff; /* Add border */
-    border-radius: 0.5vw; /* Add border radius */
-    text-decoration: none;
-    color: #fff;
-  }
-
-  .cv-box:hover {
-    background-color: #fff;
-    color: #000;
-  }
-
-  .cv-box:active {
-    transform: translateY(2px);
-  }
-
-  #profile-details {
-    display: flex;
-    align-items: center;
-  }
-
-  #profile-name {
-    font-size: 4vw;
-  }
-
-  .main-name {
-    font-weight: bold;
-  }
-
-  .position {
-    font-size: 1.5vw;
-  }
-
-  #menu-icon {
-    display: none;
-    cursor: pointer;
-  }
-
-  nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  nav ul li {
-    display: inline-block;
-    margin-left: 4vw;
-  }
-
-  #middle-section {
-    text-align: justify;
-    padding: 4vw;
-    margin: 0 auto;
-  }
-
-  /* Animation styles */
-  .slideshow-container {
-    max-width: 100%;
-    position: relative;
-    margin-top: 4vw;
-  }
-
-  .mySlides {
-    display: none;
-  }
-
-  .mySlides img {
-    width: 100%;
-  }
-
-  .text {
-    text-align: center;
-    color: #000;
-    font-size: 1.5vw;
-    margin-top: 1vw;
-  }
-
-  .numbertext {
-    color: #000;
-    font-size: 1.2vw;
-  }
-
-  .dot {
-    height: 1vw;
-    width: 1vw;
-    margin: 0 0.5vw;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-  }
-
-  .active {
-    background-color: #717171;
-  }
-
-  footer {
-    background-color: #000;
-    padding: 2vw 4vw;
-    text-align: center;
-    border-top: none;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-  }
-
-  footer a, footer p {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 2vw;
-    font-size: 70%;
-  }
-
-  .footer-links {
-    display: flex;
-    align-items: center;
-  }
-
-  .footer-links .icon-wrapper {
-    margin-right: 2vw;
-    position: relative;
-  }
-
-  .footer-links .icon-wrapper img {
-    width: 2vw;
-    height: 2vw;
-    border-radius: 50%;
-    border: 2px solid goldenrod; /* Adjust border color and size */
-  }
-
-  .footer-links .icon-wrapper a {
-    display: block;
-    width: 2.5vw;
-    height: 2.5vw;
-    overflow: hidden;
-  }
-
-  @media(max-width: 768px) {
-    #menu-icon {
-      display: block;
-    }
-
-    nav ul {
-      display: none;
-      position: absolute;
-      top: 5vw;
-      right: 4vw;
-      background-color: rgba(255, 218, 185, 0.75);
-      padding: 1vw;
-      box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.1);
-    }
-
-    nav ul li {
-      display: block;
-      margin: 2vw 0;
-    }
-
-    .text {
-      font-size: 4vw;
-      margin-top: 2vw;
-    }
-
-    .numbertext {
-      font-size: 3vw;
-    }
-
-    .dot {
-      height: 2vw;
-      width: 2vw;
-      margin: 0 1vw;
-    }
+  /* Inverted logo styles */
+  .footer-links img.inverted {
+    filter: invert(1);
   }
 </style>
 </head>
@@ -217,7 +39,7 @@
 <div id="middle-section">
  <p>I am born and raised in Nepal. I received my Bachelor and Master of Science from Tribhuvan University 
      with a major in Physics. In 2019, I received my Masters of Science in Physics from the University of
-     Texas at El Paso.<br>
+     Texas at El Paso.<\br>
    I am currently a Ph.D. candidate in the Computational Science Program at the University 
    of Texas at El Paso (UTEP). My research at UTEP has focused on studying thermal properties and thermal 
    anharmonicity in transition metals and alloys (phonons) under high pressure and temperature via molecular dynamics (MD) and 
@@ -277,25 +99,19 @@
 <footer>
   <div class="footer-links">
     <a href="https://scholar.google.com/citations?hl=en&user=fSqUY48AAAAJ" target="_blank">
-      <div class="icon-wrapper">
-        <img src="https://scholar.google.com/favicon.ico" alt="Google Scholar">
-      </div>
+      <img src="https://scholar.google.com/favicon.ico" alt="Google Scholar" style="width: 2vw; height: 2vw;" class="inverted">
     </a>
     <a href="https://www.linkedin.com/in/bimal-k-c-8a5775112/" target="_blank">
-      <div class="icon-wrapper">
-        <img src="https://www.linkedin.com/favicon.ico" alt="LinkedIn">
-      </div>
+      <img src="https://www.linkedin.com/favicon.ico" alt="LinkedIn" style="width: 2vw; height: 2vw;" class="inverted">
     </a>
     <a href="https://github.com/kcbimal" target="_blank">
-      <div class="icon-wrapper">
-        <img src="https://github.com/favicon.ico" alt="GitHub">
-      </div>
+      <img src="https://github.com/favicon.ico" alt="GitHub" style="width: 2vw; height: 2vw;" class="inverted">
     </a>
-    <div class="icon-wrapper">
-      <a href="https://kcbimal.github.io/Course.html" target="_self">
-        <img src="./index_files/course.png" alt="Courses">
-      </a>
-    </div>
+    <!-- Assuming this is the link for courses -->
+    <a href="https://kcbimal.github.io/Course.html" target="_self">
+      <!-- Replace this with the actual icon for courses -->
+      <img src="path_to_your_courses_icon.png" alt="Courses" style="width: 2vw; height: 2vw;" class="inverted">
+    </a>
   </div>
   <p>Contact: bkc@miners.utep.edu</p>
 </footer>
