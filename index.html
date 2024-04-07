@@ -12,11 +12,178 @@
     background-color: #f2f2f2; /* Original background color */
   }
 
-  /* Your existing CSS styles here */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.275vw 4vw; /* Decreased padding by 15% */
+    background-color: #000;
+    color: #fff;
+    box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.1);
+  }
 
-  /* Inverted logo styles */
-  .footer-links img.inverted {
-    filter: invert(1);
+  .cv-box {
+    padding: 0.5vw 1vw; /* Adjust padding as needed */
+    border: 2px solid #fff; /* Add border */
+    border-radius: 0.5vw; /* Add border radius */
+    text-decoration: none;
+    color: #fff;
+  }
+
+  .cv-box:hover {
+    background-color: #fff;
+    color: #000;
+  }
+
+  .cv-box:active {
+    transform: translateY(2px);
+  }
+
+  #profile-details {
+    display: flex;
+    align-items: center;
+  }
+
+  #profile-name {
+    font-size: 4vw;
+  }
+
+  .main-name {
+    font-weight: bold;
+  }
+
+  .position {
+    font-size: 1.5vw;
+  }
+
+  #menu-icon {
+    display: none;
+    cursor: pointer;
+  }
+
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  nav ul li {
+    display: inline-block;
+    margin-left: 4vw;
+  }
+
+  #middle-section {
+    text-align: justify;
+    padding: 4vw;
+    margin: 0 auto;
+  }
+
+  /* Animation styles */
+  .slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin-top: 4vw;
+  }
+
+  .mySlides {
+    display: none;
+  }
+
+  .mySlides img {
+    width: 100%;
+  }
+
+  .text {
+    text-align: center;
+    color: #000;
+    font-size: 1.5vw;
+    margin-top: 1vw;
+  }
+
+  .numbertext {
+    color: #000;
+    font-size: 1.2vw;
+  }
+
+  .dot {
+    height: 1vw;
+    width: 1vw;
+    margin: 0 0.5vw;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+
+  .active {
+    background-color: #717171;
+  }
+
+  footer {
+    background-color: #000;
+    padding: 2vw 4vw;
+    text-align: center;
+    border-top: none;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  footer a, footer p {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 2vw;
+    font-size: 70%;
+  }
+
+  .footer-links {
+    display: flex;
+    align-items: center;
+  }
+
+  .footer-links a {
+    margin-right: 2vw;
+  }
+
+  .footer-links img {
+    margin-right: 2vw;
+  }
+
+  @media(max-width: 768px) {
+    #menu-icon {
+      display: block;
+    }
+
+    nav ul {
+      display: none;
+      position: absolute;
+      top: 5vw;
+      right: 4vw;
+      background-color: rgba(255, 218, 185, 0.75);
+      padding: 1vw;
+      box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.1);
+    }
+
+    nav ul li {
+      display: block;
+      margin: 2vw 0;
+    }
+
+    .text {
+      font-size: 4vw;
+      margin-top: 2vw;
+    }
+
+    .numbertext {
+      font-size: 3vw;
+    }
+
+    .dot {
+      height: 2vw;
+      width: 2vw;
+      margin: 0 1vw;
+    }
   }
 </style>
 </head>
@@ -39,9 +206,9 @@
 <div id="middle-section">
  <p>I am born and raised in Nepal. I received my Bachelor and Master of Science from Tribhuvan University 
      with a major in Physics. In 2019, I received my Masters of Science in Physics from the University of
-     Texas at El Paso.<\br>
-   I am currently a Ph.D. candidate in the Computational Science Program at the University 
-   of Texas at El Paso (UTEP). My research at UTEP has focused on studying thermal properties and thermal 
+     Texas at El Paso. I am currently a Ph.D. candidate in the Computational Science Program at the University 
+   of Texas at El Paso (UTEP). <br>
+   My research at UTEP has focused on studying thermal properties and thermal 
    anharmonicity in transition metals and alloys (phonons) under high pressure and temperature via molecular dynamics (MD) and 
    Quasiharmonic approximation (QHA). I am also working on testing classical interatomic force-field models
    for modeling material behavior under extreme environments.</p>
@@ -98,19 +265,18 @@
 
 <footer>
   <div class="footer-links">
+    <!--
+    <li><a href="https://kcbimal.github.io/Course.html" target="_self">
+  
+  </a></li> -->
     <a href="https://scholar.google.com/citations?hl=en&user=fSqUY48AAAAJ" target="_blank">
-      <img src="https://scholar.google.com/favicon.ico" alt="Google Scholar" style="width: 2vw; height: 2vw;" class="inverted">
+      <img src="https://scholar.google.com/favicon.ico" alt="Google Scholar" style="width: 2vw; height: 2vw;">
     </a>
     <a href="https://www.linkedin.com/in/bimal-k-c-8a5775112/" target="_blank">
-      <img src="https://www.linkedin.com/favicon.ico" alt="LinkedIn" style="width: 2vw; height: 2vw;" class="inverted">
+      <img src="https://www.linkedin.com/favicon.ico" alt="LinkedIn" style="width: 2vw; height: 2vw;">
     </a>
     <a href="https://github.com/kcbimal" target="_blank">
-      <img src="https://github.com/favicon.ico" alt="GitHub" style="width: 2vw; height: 2vw;" class="inverted">
-    </a>
-    <!-- Assuming this is the link for courses -->
-    <a href="https://kcbimal.github.io/Course.html" target="_self">
-      <!-- Replace this with the actual icon for courses -->
-      <img src="path_to_your_courses_icon.png" alt="Courses" style="width: 2vw; height: 2vw;" class="inverted">
+      <img src="https://github.com/favicon.ico" alt="GitHub" style="width: 2vw; height: 2vw;">
     </a>
   </div>
   <p>Contact: bkc@miners.utep.edu</p>
