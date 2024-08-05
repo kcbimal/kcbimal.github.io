@@ -16,21 +16,33 @@
     overflow-x: hidden; /* Prevent horizontal scroll */
   }
 
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5vw 2vw; /* Adjusted padding */
+  .container {
+    max-width: 1200px; /* Adjust this value as needed */
+    margin: 0 auto;
+    padding: 0 2vw; /* Padding for body content */
+    box-sizing: border-box;
+  }
+
+  header, footer {
     background-color: #000;
     color: #fff;
     box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.1);
-    position: relative;
-    z-index: 1;
+    width: 100%;
+  }
+
+  header {
+    padding: 1.5vw 0;
+  }
+
+  footer {
+    padding: 1.5vw 0;
+    text-align: center;
   }
 
   #profile-details {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
   }
 
   #profile-name {
@@ -83,8 +95,6 @@
   #middle-section {
     padding: 2vw;
     margin: 0 auto;
-    max-width: 80vw; /* Center content and set max width */
-    box-sizing: border-box;
     text-align: justify;
   }
 
@@ -127,15 +137,6 @@
 
   .active {
     background-color: #717171;
-  }
-
-  footer {
-    background-color: #000;
-    padding: 1.5vw 2vw; /* Adjusted padding */
-    text-align: center;
-    color: #fff;
-    position: relative;
-    z-index: 1;
   }
 
   .footer-links {
@@ -204,21 +205,23 @@
 </head>
 <body>
 <header>
-    <div id="profile-details">
-      <div id="profile-name">
-        <span class="main-name">Bimal K C</span><br>
-        <span class="position">El Paso, TX | 915-208-5429</span>
+    <div class="container">
+      <div id="profile-details">
+        <div id="profile-name">
+          <span class="main-name">Bimal K C</span><br>
+          <span class="position">El Paso, TX | 915-208-5429</span>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="./index_files/BKC_CV.pdf" class="cv-box">My CV</a></li>
+          </ul>
+        </nav>
+        <div id="menu-icon">&#9776;</div>
       </div>
     </div>
-    <nav>
-      <ul>
-        <li><a href="./index_files/BKC_CV.pdf" class="cv-box">My CV</a></li>
-      </ul>
-    </nav>
-    <div id="menu-icon">&#9776;</div>
 </header>
 
-<div id="middle-section">
+<div id="middle-section" class="container">
  <p>I am born and raised in Nepal. I received my Bachelor and Master of Science from Tribhuvan University 
      with a major in Physics. In 2019, I received my Masters of Science in Physics from the University of
      Texas at El Paso. I am currently a Ph.D. candidate in the Computational Science Program at the University 
@@ -272,19 +275,21 @@
 </div>
 
 <footer>
-  <div class="footer-links">
-    <a href="https://scholar.google.com/citations?hl=en&user=fSqUY48AAAAJ" target="_blank">
-      <img src="https://scholar.google.com/favicon.ico" alt="Google Scholar">
-    </a>
-    <a href="https://www.linkedin.com/in/bimal-k-c-8a5775112/" target="_blank">
-      <img src="https://www.linkedin.com/favicon.ico" alt="LinkedIn">
-    </a>
-    <a href="https://github.com/kcbimal" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Github-desktop-logo-symbol.svg" alt="GitHub">
-    </a>
-    <a href="mailto:bkc@miners.utep.edu" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/d/df/Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg" alt="Outlook">
-    </a>
+  <div class="container">
+    <div class="footer-links">
+      <a href="https://scholar.google.com/citations?hl=en&user=fSqUY48AAAAJ" target="_blank">
+        <img src="https://scholar.google.com/favicon.ico" alt="Google Scholar">
+      </a>
+      <a href="https://www.linkedin.com/in/bimal-k-c-8a5775112/" target="_blank">
+        <img src="https://www.linkedin.com/favicon.ico" alt="LinkedIn">
+      </a>
+      <a href="https://github.com/kcbimal" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Github-desktop-logo-symbol.svg" alt="GitHub">
+      </a>
+      <a href="mailto:bkc@miners.utep.edu" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/df/Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg" alt="Outlook">
+      </a>
+    </div>
   </div>
 </footer>
 
