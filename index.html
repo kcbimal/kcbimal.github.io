@@ -5,21 +5,53 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bimal K C, PhD Candidate</title>
 <style>
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
+
   body {
     font-family: Arial, sans-serif;
-    padding: 0;
-    margin: 0;
     background-color: #f2f2f2;
+    overflow-x: hidden; /* Prevent horizontal scroll */
   }
 
   header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.275vw 4vw;
+    padding: 1.5vw 2vw; /* Adjusted padding */
     background-color: #000;
     color: #fff;
     box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.1);
+  }
+
+  #profile-details {
+    display: flex;
+    align-items: center;
+  }
+
+  #profile-name {
+    font-size: 3vw; /* Adjusted font size */
+  }
+
+  .main-name {
+    font-weight: bold;
+  }
+
+  .position {
+    font-size: 1.2vw; /* Adjusted font size */
+  }
+
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  nav ul li {
+    display: inline-block;
+    margin-left: 2vw;
   }
 
   .cv-box {
@@ -39,50 +71,21 @@
     transform: translateY(2px);
   }
 
-  #profile-details {
-    display: flex;
-    align-items: center;
-  }
-
-  #profile-name {
-    font-size: 4vw;
-  }
-
-  .main-name {
-    font-weight: bold;
-  }
-
-  .position {
-    font-size: 1.5vw;
-  }
-
   #menu-icon {
     display: none;
     cursor: pointer;
   }
 
-  nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  nav ul li {
-    display: inline-block;
-    margin-left: 4vw;
-  }
-
   #middle-section {
-    text-align: justify;
-    padding: 4vw;
+    padding: 2vw;
     margin: 0 auto;
+    max-width: 100%; /* Ensure content fits within the viewport */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
   }
 
-  /* Animation styles */
   .slideshow-container {
     max-width: 100%;
     position: relative;
-    margin-top: 4vw;
   }
 
   .mySlides {
@@ -90,7 +93,8 @@
   }
 
   .mySlides img {
-    width: 100%;
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
   }
 
   .text {
@@ -121,7 +125,7 @@
 
   footer {
     background-color: #000;
-    padding: 2vw 4vw;
+    padding: 1.5vw 2vw; /* Adjusted padding */
     text-align: center;
     color: #fff;
   }
@@ -137,8 +141,8 @@
   }
 
   .footer-links img {
-    width: 2vw;
-    height: 2vw;
+    width: 2.5vw; /* Adjusted icon size */
+    height: auto; /* Maintain aspect ratio */
   }
 
   @media(max-width: 768px) {
@@ -150,10 +154,14 @@
       display: none;
       position: absolute;
       top: 5vw;
-      right: 4vw;
+      right: 2vw;
       background-color: rgba(255, 218, 185, 0.75);
       padding: 1vw;
       box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.1);
+    }
+
+    nav ul.active {
+      display: block;
     }
 
     nav ul li {
@@ -161,19 +169,25 @@
       margin: 2vw 0;
     }
 
+    #profile-name {
+      font-size: 5vw; /* Larger font size for smaller screens */
+    }
+
+    .position {
+      font-size: 2vw; /* Larger font size for smaller screens */
+    }
+
     .text {
-      font-size: 4vw;
-      margin-top: 2vw;
+      font-size: 4vw; /* Larger font size for smaller screens */
     }
 
     .numbertext {
-      font-size: 3vw;
+      font-size: 3vw; /* Larger font size for smaller screens */
     }
 
     .dot {
-      height: 2vw;
-      width: 2vw;
-      margin: 0 1vw;
+      height: 2vw; /* Adjusted dot size */
+      width: 2vw; /* Adjusted dot size */
     }
   }
 </style>
@@ -192,7 +206,7 @@
       </ul>
     </nav>
     <div id="menu-icon">&#9776;</div>
-  </header>
+</header>
 
 <div id="middle-section">
  <p>I am born and raised in Nepal. I received my Bachelor and Master of Science from Tribhuvan University 
@@ -206,8 +220,7 @@
    classical molecular dynamics (LAMMPS) as well as quantum molecular dynamics (QMD).</p>
 
  <div class="slideshow-container">
-   
-   <div class="mySlides fade">
+    <div class="mySlides fade">
       <img src="./index_files/nmsu.png" alt="Best oral presentation award (2024), NMSU, NM">
       <div class="text">Best oral presentation award (2024), NMSU, NM</div>
     </div>
@@ -215,34 +228,27 @@
       <img src="./index_files/award.jpg" alt="Excellence award (2019), Physics Department, UTEP">
       <div class="text">Excellence award (2019), Physics Department, UTEP</div>
     </div>
-    
     <div class="mySlides fade">
       <img src="./index_files/lab1.jpg" alt="Dr. Jorge research group members: Enjoying indoor skydiving @ifly">
       <div class="text">Dr. Jorge research group members: Enjoying indoor skydiving @ifly</div>
     </div>
-    
     <div class="mySlides fade">
       <img src="./index_files/lab.JPG" alt="Lunch with my research advisor & lab members">
       <div class="text">Lunch with my research advisor & lab members</div>
     </div>
-    
     <div class="mySlides fade">
       <img src="./index_files/graduation1.JPG" alt="MS graduation ceremony (UTEP). Dec 15 2019">
       <div class="text">MS graduation ceremony (UTEP). Dec 15 2019</div>
     </div>
-
     <div class="mySlides fade">
       <img src="./index_files/ta.jpg" alt="Outstanding Achievement Award: Better Rated by Students (2019)">
       <div class="text">Outstanding Achievement Award: Better Rated by Students (2019)</div>
     </div>
-
     <div class="mySlides fade">
       <img src="./index_files/aps.jpeg" alt="APS March Meeting 2024, Minneapolis, MN">
       <div class="text">APS March Meeting 2024, Minneapolis, MN</div>
     </div>
-    
     <br>
-
     <div style="text-align:center">
       <span class="dot"></span>
       <span class="dot"></span> 
