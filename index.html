@@ -19,6 +19,8 @@
     border-bottom: 2px solid #000; /* Add a black border at the bottom */
     padding: 1.275vw 4vw;
     box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.1);
+    max-width: calc(100% - 4in); /* Account for body padding */
+    margin: 0 auto; /* Center horizontally */
   }
 
   header {
@@ -49,6 +51,8 @@
   #profile-details {
     display: flex;
     align-items: center;
+    justify-content: center; /* Center profile details */
+    text-align: center; /* Center text */
   }
 
   #profile-name {
@@ -72,10 +76,11 @@
     list-style-type: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    justify-content: center; /* Center nav items */
   }
 
   nav ul li {
-    display: inline-block;
     margin-left: 4vw;
   }
 
@@ -83,6 +88,7 @@
     text-align: justify;
     padding: 4vw;
     margin: 0 auto;
+    max-width: calc(100% - 4in); /* Account for body padding */
   }
 
   /* Animation styles */
