@@ -24,11 +24,13 @@
     background-color: #000;
     color: #fff;
     box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
   }
 
   #profile-details {
     display: flex;
-    align-items: center;
+    flex-direction: column;
   }
 
   #profile-name {
@@ -47,10 +49,11 @@
     list-style-type: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    align-items: center;
   }
 
   nav ul li {
-    display: inline-block;
     margin-left: 2vw;
   }
 
@@ -74,18 +77,21 @@
   #menu-icon {
     display: none;
     cursor: pointer;
+    font-size: 2.5vw; /* Larger menu icon for mobile */
   }
 
   #middle-section {
     padding: 2vw;
     margin: 0 auto;
-    max-width: 100%; /* Ensure content fits within the viewport */
-    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    max-width: 80vw; /* Center content and set max width */
+    box-sizing: border-box;
+    text-align: justify;
   }
 
   .slideshow-container {
-    max-width: 100%;
     position: relative;
+    max-width: 100%;
+    margin: 2vw auto; /* Center slideshow */
   }
 
   .mySlides {
@@ -128,6 +134,8 @@
     padding: 1.5vw 2vw; /* Adjusted padding */
     text-align: center;
     color: #fff;
+    position: relative;
+    z-index: 1;
   }
 
   .footer-links {
@@ -158,10 +166,12 @@
       background-color: rgba(255, 218, 185, 0.75);
       padding: 1vw;
       box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.1);
+      flex-direction: column;
+      width: 100vw;
     }
 
     nav ul.active {
-      display: block;
+      display: flex;
     }
 
     nav ul li {
