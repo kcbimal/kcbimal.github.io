@@ -7,19 +7,26 @@
 <style>
   body {
     font-family: Arial, sans-serif;
-    padding: 0;
+    padding: 1in 2in; /* Add white space of 1 inch on top and bottom, 2 inches on left and right */
     margin: 0;
-    background-color: #f2f2f2;
+    background-color: #fff; /* Ensure the body background is white */
+  }
+
+  header, footer {
+    background-color: #000;
+    color: #fff;
+    border-top: 2px solid #000; /* Add a black border at the top */
+    border-bottom: 2px solid #000; /* Add a black border at the bottom */
+    padding: 1.275vw 4vw;
+    box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.1);
   }
 
   header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.275vw 4vw;
-    background-color: #000;
-    color: #fff;
-    box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.1);
+    margin-bottom: 1in; /* Space between header and main content */
+  }
+
+  footer {
+    margin-top: 1in; /* Space between footer and main content */
   }
 
   .cv-box {
