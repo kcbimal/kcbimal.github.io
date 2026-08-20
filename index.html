@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
@@ -123,7 +124,9 @@ header {
 
     color: #111;
 
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
+
     text-align: left;
 
     cursor: pointer;
@@ -142,7 +145,7 @@ header {
 
 
 /* =========================================================
-   MAIN WHITE CONTENT AREA
+   CONTENT
 ========================================================= */
 
 .content-box {
@@ -156,11 +159,6 @@ header {
 
     box-shadow: 0 2px 10px rgba(0,0,0,0.08);
 }
-
-
-/* =========================================================
-   TAB CONTENT
-========================================================= */
 
 .tab-content {
     display: none;
@@ -203,11 +201,6 @@ header {
 .mySlides {
     display: none;
 }
-
-
-/* =========================================================
-   SLIDESHOW IMAGE
-========================================================= */
 
 .mySlides img {
     display: block;
@@ -321,7 +314,7 @@ header {
 
 
 /* =========================================================
-   FADE ANIMATION
+   FADE EFFECT
 ========================================================= */
 
 .fade {
@@ -343,7 +336,7 @@ header {
 
 
 /* =========================================================
-   TEACHING
+   TEACHING PAGE
 ========================================================= */
 
 #teaching-content h2 {
@@ -366,6 +359,11 @@ header {
     margin-bottom: 20px;
 }
 
+
+/* =========================================================
+   COURSES TAUGHT
+========================================================= */
+
 .teaching-box {
     margin-top: 30px;
 
@@ -378,14 +376,30 @@ header {
 
 .teaching-box h3 {
     margin-top: 0;
+    margin-bottom: 22px;
+
+    font-size: 19px;
+}
+
+.teaching-box h4 {
+    margin-top: 22px;
+    margin-bottom: 8px;
+
+    font-size: 16px;
 }
 
 .teaching-box ul {
-    margin-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 18px;
+
+    padding-left: 25px;
 }
 
 .teaching-box li {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
+
+    font-size: 16px;
+    line-height: 1.4;
 }
 
 
@@ -409,7 +423,6 @@ footer {
     display: flex;
 
     justify-content: center;
-
     align-items: center;
 
     gap: 18px;
@@ -507,7 +520,6 @@ footer {
 </head>
 
 
-
 <body>
 
 
@@ -556,6 +568,7 @@ footer {
 
     <div class="tabs">
 
+
         <button
             id="about-button"
             class="tab-button active"
@@ -575,12 +588,13 @@ footer {
 
         </button>
 
+
     </div>
 
 
 
     <!-- =====================================================
-         CONTENT BOX
+         CONTENT
     ====================================================== -->
 
     <div class="content-box">
@@ -639,13 +653,13 @@ footer {
             <div class="slideshow-container">
 
 
-                <!-- 1 -->
+                <!-- SLIDE 1 -->
 
                 <div class="mySlides fade">
 
                     <img
                         src="./index_files/seec.jpeg"
-                        alt="SEEC, Houston Space Center - Houston, TX, 4-7 Feb 2027">
+                        alt="SEEC, Houston Space Center">
 
                     <div class="text">
                         SEEC, Houston Space Center - Houston, TX, 4-7 Feb 2027
@@ -655,13 +669,13 @@ footer {
 
 
 
-                <!-- 2 -->
+                <!-- SLIDE 2 -->
 
                 <div class="mySlides fade">
 
                     <img
                         src="./index_files/gfam.jpg"
-                        alt="Ph.D. Graduation Ceremony, UTEP - El Paso, TX, 14 Dec 2024">
+                        alt="Ph.D. Graduation Ceremony">
 
                     <div class="text">
                         Ph.D. Graduation Ceremony, UTEP - El Paso, TX, 14 Dec 2024
@@ -671,13 +685,13 @@ footer {
 
 
 
-                <!-- 3 -->
+                <!-- SLIDE 3 -->
 
                 <div class="mySlides fade">
 
                     <img
                         src="./index_files/phd.jpg"
-                        alt="Academic and Research Excellence award (2024), Computational Science, UTEP">
+                        alt="Academic and Research Excellence Award">
 
                     <div class="text">
                         Academic and Research Excellence Award (2024), Computational Science, UTEP
@@ -687,13 +701,13 @@ footer {
 
 
 
-                <!-- 4 -->
+                <!-- SLIDE 4 -->
 
                 <div class="mySlides fade">
 
                     <img
                         src="./index_files/nmsu.png"
-                        alt="Best oral presentation award (2024), NMSU, NM">
+                        alt="Best Oral Presentation Award">
 
                     <div class="text">
                         Best Oral Presentation Award (2024), NMSU, NM
@@ -703,13 +717,13 @@ footer {
 
 
 
-                <!-- 5 -->
+                <!-- SLIDE 5 -->
 
                 <div class="mySlides fade">
 
                     <img
                         src="./index_files/award.jpg"
-                        alt="Academic and Research Excellence award (2019), Physics Department, UTEP">
+                        alt="Academic and Research Excellence Award">
 
                     <div class="text">
                         Academic and Research Excellence Award (2019), Physics Department, UTEP
@@ -719,13 +733,13 @@ footer {
 
 
 
-                <!-- 6 -->
+                <!-- SLIDE 6 -->
 
                 <div class="mySlides fade">
 
                     <img
                         src="./index_files/lab1.jpg"
-                        alt="Dr. Muñoz research group members: Enjoying indoor skydiving at iFly">
+                        alt="Research Group">
 
                     <div class="text">
                         Dr. Muñoz Research Group Members: Enjoying Indoor Skydiving @iFly (2022)
@@ -735,13 +749,13 @@ footer {
 
 
 
-                <!-- 7 -->
+                <!-- SLIDE 7 -->
 
                 <div class="mySlides fade">
 
                     <img
                         src="./index_files/lab.JPG"
-                        alt="Lunch with my research advisor and lab members">
+                        alt="Research Advisor and Lab Members">
 
                     <div class="text">
                         Lunch with My Research Advisor &amp; Lab Members (2018)
@@ -751,13 +765,13 @@ footer {
 
 
 
-                <!-- 8 -->
+                <!-- SLIDE 8 -->
 
                 <div class="mySlides fade">
 
                     <img
                         src="./index_files/graduation1.JPG"
-                        alt="MS graduation ceremony UTEP, Dec 15 2019">
+                        alt="MS Graduation Ceremony">
 
                     <div class="text">
                         MS Graduation Ceremony (UTEP), Dec. 15, 2019
@@ -767,13 +781,13 @@ footer {
 
 
 
-                <!-- 9 -->
+                <!-- SLIDE 9 -->
 
                 <div class="mySlides fade">
 
                     <img
                         src="./index_files/ta.jpg"
-                        alt="Outstanding Achievement Award: Better Rated by Students (2019)">
+                        alt="Outstanding Achievement Award">
 
                     <div class="text">
                         Outstanding Achievement Award: Better Rated by Students (2019)
@@ -783,13 +797,13 @@ footer {
 
 
 
-                <!-- 10 -->
+                <!-- SLIDE 10 -->
 
                 <div class="mySlides fade">
 
                     <img
                         src="./index_files/aps.jpeg"
-                        alt="APS March Meeting 2024, Minneapolis, MN">
+                        alt="APS March Meeting">
 
                     <div class="text">
                         APS March Meeting 2024, Minneapolis, MN
@@ -799,13 +813,13 @@ footer {
 
 
 
-                <!-- 11 -->
+                <!-- SLIDE 11 -->
 
                 <div class="mySlides fade">
 
                     <img
                         src="./index_files/2.jpg"
-                        alt="Putting Physics into Motion! Fall 2025, Central Texas College, TX">
+                        alt="Putting Physics into Motion">
 
                     <div class="text">
                         Putting Physics into Motion! (Fall 2025), Central Texas College, TX
@@ -815,7 +829,7 @@ footer {
 
 
 
-                <!-- PREVIOUS -->
+                <!-- PREVIOUS BUTTON -->
 
                 <button
                     class="prev"
@@ -826,7 +840,7 @@ footer {
                 </button>
 
 
-                <!-- NEXT -->
+                <!-- NEXT BUTTON -->
 
                 <button
                     class="next"
@@ -842,21 +856,31 @@ footer {
 
 
             <!-- =================================================
-                 DOTS
+                 SLIDESHOW DOTS
             ================================================== -->
 
             <div class="dots-container">
 
                 <span class="dot" onclick="currentSlide(1)"></span>
+
                 <span class="dot" onclick="currentSlide(2)"></span>
+
                 <span class="dot" onclick="currentSlide(3)"></span>
+
                 <span class="dot" onclick="currentSlide(4)"></span>
+
                 <span class="dot" onclick="currentSlide(5)"></span>
+
                 <span class="dot" onclick="currentSlide(6)"></span>
+
                 <span class="dot" onclick="currentSlide(7)"></span>
+
                 <span class="dot" onclick="currentSlide(8)"></span>
+
                 <span class="dot" onclick="currentSlide(9)"></span>
+
                 <span class="dot" onclick="currentSlide(10)"></span>
+
                 <span class="dot" onclick="currentSlide(11)"></span>
 
             </div>
@@ -904,32 +928,85 @@ footer {
 
 
 
+            <!-- =================================================
+                 COURSES TAUGHT
+            ================================================== -->
+
             <div class="teaching-box">
 
+
                 <h3>
-                    Courses Taught
+                    Courses Taught During the Three Most Recent Semesters
                 </h3>
 
+
+
+                <!-- FALL 2026 -->
+
+                <h4>
+                    Fall 2026
+                </h4>
 
                 <ul>
 
                     <li>
-                        University Physics I
+                        University Physics I [PHYS 2425]
                     </li>
 
                     <li>
-                        University Physics II
+                        College Physics I [PHYS 1401]
                     </li>
 
                     <li>
-                        College Physics II
-                    </li>
-
-                    <li>
-                        Physical Science I
+                        Physical Science [PHYS 1415]
                     </li>
 
                 </ul>
+
+
+
+                <!-- SUMMER 2026 -->
+
+                <h4>
+                    Summer 2026
+                </h4>
+
+                <ul>
+
+                    <li>
+                        College Physics I [PHYS 1401]
+                    </li>
+
+                    <li>
+                        Physical Science [PHYS 1415]
+                    </li>
+
+                </ul>
+
+
+
+                <!-- SPRING 2026 -->
+
+                <h4>
+                    Spring 2026
+                </h4>
+
+                <ul>
+
+                    <li>
+                        University Physics II [PHYS 2426]
+                    </li>
+
+                    <li>
+                        College Physics II [PHYS 1402]
+                    </li>
+
+                    <li>
+                        Physical Science [PHYS 1415]
+                    </li>
+
+                </ul>
+
 
             </div>
 
@@ -950,8 +1027,11 @@ footer {
 
 <footer>
 
+
     <div class="footer-links">
 
+
+        <!-- GOOGLE SCHOLAR -->
 
         <a
             href="https://scholar.google.com/citations?hl=en&user=fSqUY48AAAAJ"
@@ -964,6 +1044,9 @@ footer {
         </a>
 
 
+
+        <!-- LINKEDIN -->
+
         <a
             href="https://www.linkedin.com/in/kcbimal/"
             target="_blank">
@@ -974,6 +1057,9 @@ footer {
 
         </a>
 
+
+
+        <!-- GITHUB -->
 
         <a
             href="https://github.com/kcbimal"
@@ -986,18 +1072,22 @@ footer {
         </a>
 
 
+
+        <!-- EMAIL -->
+
         <a
             href="mailto:bkc@ctcd.edu">
 
             <img
                 src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/microsoftoutlook.svg"
-                alt="Outlook"
+                alt="Email"
                 style="filter: invert(1);">
 
         </a>
 
 
     </div>
+
 
 </footer>
 
@@ -1042,11 +1132,15 @@ function openTab(tabId, clickedButton) {
 
 
     window.scrollTo({
+
         top: 0,
+
         behavior: "smooth"
+
     });
 
 }
+
 
 
 /* =========================================================
@@ -1058,9 +1152,9 @@ let slideIndex = 1;
 let slideTimer;
 
 
-/* ---------------------------------------------------------
-   SHOW SELECTED SLIDE
---------------------------------------------------------- */
+/* =========================================================
+   SHOW SLIDE
+========================================================= */
 
 function showSlide(n) {
 
@@ -1099,7 +1193,8 @@ function showSlide(n) {
     }
 
 
-    slides[slideIndex - 1].style.display = "block";
+    slides[slideIndex - 1]
+        .style.display = "block";
 
 
     dots[slideIndex - 1]
@@ -1108,9 +1203,10 @@ function showSlide(n) {
 }
 
 
-/* ---------------------------------------------------------
-   NEXT / PREVIOUS
---------------------------------------------------------- */
+
+/* =========================================================
+   PREVIOUS / NEXT
+========================================================= */
 
 function changeSlide(n) {
 
@@ -1123,9 +1219,10 @@ function changeSlide(n) {
 }
 
 
-/* ---------------------------------------------------------
-   DOT CLICK
---------------------------------------------------------- */
+
+/* =========================================================
+   CLICK DOT
+========================================================= */
 
 function currentSlide(n) {
 
@@ -1138,9 +1235,10 @@ function currentSlide(n) {
 }
 
 
-/* ---------------------------------------------------------
-   AUTO SLIDESHOW
---------------------------------------------------------- */
+
+/* =========================================================
+   AUTOMATIC SLIDESHOW
+========================================================= */
 
 function autoSlide() {
 
@@ -1151,9 +1249,10 @@ function autoSlide() {
 }
 
 
-/* ---------------------------------------------------------
-   RESTART TIMER
---------------------------------------------------------- */
+
+/* =========================================================
+   RESTART SLIDESHOW
+========================================================= */
 
 function restartSlideshow() {
 
@@ -1165,24 +1264,53 @@ function restartSlideshow() {
 }
 
 
-/* ---------------------------------------------------------
-   START
---------------------------------------------------------- */
+
+/* =========================================================
+   START WEBSITE
+========================================================= */
 
 document.addEventListener(
     "DOMContentLoaded",
     function() {
+
+
+        /* Start slideshow */
 
         showSlide(slideIndex);
 
         slideTimer =
             setInterval(autoSlide, 3000);
 
+
+        /* Make sure About Me opens first */
+
+        document
+            .getElementById("about-content")
+            .classList.add("active");
+
+
+        document
+            .getElementById("teaching-content")
+            .classList.remove("active");
+
+
+        document
+            .getElementById("about-button")
+            .classList.add("active");
+
+
+        document
+            .getElementById("teaching-button")
+            .classList.remove("active");
+
+
     }
 );
+
 
 </script>
 
 
 </body>
+
 </html>
