@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -9,26 +10,21 @@
 
 <style>
 
-/* ===============================
-   GENERAL
-================================ */
-
-html {
-    scroll-behavior: smooth;
-}
+/* =========================================
+   BODY
+========================================= */
 
 body {
     font-family: Arial, sans-serif;
     padding: 0;
     margin: 0;
     background-color: #f2f2f2;
-    color: #111;
 }
 
 
-/* ===============================
+/* =========================================
    HEADER
-================================ */
+========================================= */
 
 header {
     display: flex;
@@ -40,24 +36,23 @@ header {
     background-color: #000;
     color: #fff;
 
-    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
-.header-title h1 {
-    margin: 0 0 12px 0;
+header h1 {
+    margin: 0 0 14px 0;
     font-size: 30px;
 }
 
-.header-title p {
+header h3 {
     margin: 0;
     font-size: 15px;
-    font-weight: bold;
 }
 
 
-/* ===============================
+/* =========================================
    CV BUTTON
-================================ */
+========================================= */
 
 .cv-box {
     padding: 10px 20px;
@@ -66,8 +61,8 @@ header {
     border-radius: 5px;
 
     text-decoration: none;
-    color: #fff;
 
+    color: #fff;
     font-size: 16px;
 }
 
@@ -77,291 +72,224 @@ header {
 }
 
 
-/* ===============================
-   MAIN PAGE
-================================ */
+/* =========================================
+   MAIN PAGE WIDTH
+========================================= */
 
-.main-container {
-    max-width: 1000px;
+.container {
+    width: 1000px;
+    max-width: 94%;
     margin: 0 auto;
+}
+
+
+/* =========================================
+   TOP MENU
+========================================= */
+
+.tabs {
+    display: flex;
+
+    border-bottom: 1px solid #777;
+
+    background-color: #f2f2f2;
+}
+
+
+/* MENU BUTTONS */
+
+.tab-button {
+
+    width: 250px;
+
+    padding: 15px 30px;
+
+    border: none;
+    border-right: 1px solid #ddd;
+
+    background-color: #f2f2f2;
+
+    color: #111;
+
+    font-size: 14px;
+
+    text-align: left;
+
+    cursor: pointer;
+}
+
+.tab-button:hover {
+    background-color: #ddd;
+}
+
+
+/* ACTIVE TAB */
+
+.tab-button.active {
     background-color: #fff;
+}
+
+
+/* =========================================
+   MAIN WHITE CONTENT BOX
+========================================= */
+
+.content-box {
+
+    background-color: #fff;
+
+    padding: 30px 25px 45px 25px;
+
+    min-height: 650px;
 
     box-shadow: 0 2px 10px rgba(0,0,0,0.08);
 }
 
 
-/* ===============================
-   MENU
-================================ */
+/* =========================================
+   TAB CONTENT
+========================================= */
 
-.menu {
-    display: flex;
+/* hide everything by default */
 
-    background-color: #f2f2f2;
-    border-bottom: 1px solid #999;
-
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-.menu a {
-    width: 250px;
-
-    padding: 15px 30px;
-
-    text-decoration: none;
-    color: #111;
-
-    font-size: 14px;
-
-    border-right: 1px solid #ddd;
-
-    box-sizing: border-box;
-}
-
-.menu a:hover {
-    background-color: #ddd;
+.tab-content {
+    display: none;
 }
 
 
-/* ===============================
-   CONTENT
-================================ */
+/* only active section appears */
 
-.content {
-    padding: 30px 25px;
-}
-
-section {
-    scroll-margin-top: 60px;
+.tab-content.active {
+    display: block;
 }
 
 
-/* ===============================
+/* =========================================
    ABOUT ME
-================================ */
+========================================= */
 
-#about {
-    padding-bottom: 50px;
-}
+#about-content p {
 
-#about p {
     font-size: 16px;
-    line-height: 1.4;
 
-    text-align: justify;
+    line-height: 1.15;
+
+    margin-top: 10px;
+    margin-bottom: 18px;
 }
 
 
-/* ===============================
-   PROFILE
-================================ */
+/* =========================================
+   CERTIFICATE / AWARD
+========================================= */
 
-.profile-details {
-    display: flex;
+.award-container {
 
-    align-items: flex-start;
+    margin-top: 60px;
 
-    gap: 30px;
-
-    margin-bottom: 30px;
-}
-
-.profile-image {
-    width: 180px;
-    height: auto;
-
-    border-radius: 5px;
-}
-
-.profile-text {
-    flex: 1;
-}
-
-
-/* ===============================
-   HEADINGS
-================================ */
-
-h2 {
-    font-size: 24px;
-    margin-top: 0;
-    margin-bottom: 20px;
-
-    border-bottom: 2px solid #111;
-
-    padding-bottom: 8px;
-}
-
-h3 {
-    margin-top: 25px;
-}
-
-
-/* ===============================
-   AWARD
-================================ */
-
-.award-section {
-    margin-top: 40px;
     text-align: center;
 }
 
-.award-section img {
-    width: 100%;
-    max-width: 650px;
-
-    height: auto;
+.award-container img {
 
     display: block;
+
+    width: 620px;
+    max-width: 90%;
+
+    height: auto;
 
     margin: 0 auto;
 }
 
 .award-caption {
-    margin-top: 15px;
 
-    font-size: 16px;
-    font-weight: bold;
+    margin-top: 28px;
+
+    font-size: 17px;
 
     text-align: center;
 }
 
 
-/* ===============================
-   TEACHING
-================================ */
+/* =========================================
+   TEACHING PAGE
+========================================= */
 
-#teaching {
-    padding-top: 40px;
-    padding-bottom: 50px;
+#teaching-content h2 {
 
-    border-top: 1px solid #ccc;
+    font-size: 26px;
+
+    margin-top: 0;
+
+    border-bottom: 1px solid #ccc;
+
+    padding-bottom: 10px;
 }
 
-#teaching p {
+#teaching-content p {
+
     font-size: 16px;
 
-    line-height: 1.4;
-
-    text-align: justify;
+    line-height: 1.5;
 }
 
-.course-box {
-    background-color: #f5f5f5;
+.teaching-box {
 
-    border-left: 4px solid #000;
+    margin-top: 30px;
 
     padding: 20px 25px;
-
-    margin-top: 25px;
-}
-
-.course-box ul {
-    margin: 10px 0 0 0;
-
-    padding-left: 22px;
-}
-
-.course-box li {
-    padding: 6px 0;
-}
-
-
-/* ===============================
-   RESEARCH
-================================ */
-
-.research-box {
-    margin-top: 25px;
 
     background-color: #f5f5f5;
 
     border-left: 4px solid #000;
+}
 
-    padding: 20px 25px;
+.teaching-box h3 {
+
+    margin-top: 0;
+}
+
+.teaching-box li {
+
+    margin-bottom: 10px;
 }
 
 
-/* ===============================
-   LINKS
-================================ */
-
-a {
-    color: #004b8d;
-}
-
-a:hover {
-    color: #000;
-}
-
-
-/* ===============================
-   FOOTER
-================================ */
-
-footer {
-    background-color: #000;
-
-    color: #fff;
-
-    text-align: center;
-
-    padding: 20px;
-
-    font-size: 13px;
-}
-
-
-/* ===============================
+/* =========================================
    MOBILE
-================================ */
+========================================= */
 
 @media screen and (max-width: 700px) {
 
     header {
+
         padding: 20px;
 
         flex-direction: column;
+
         align-items: flex-start;
     }
 
-    .header-title h1 {
-        font-size: 25px;
-    }
-
     .cv-box {
+
         margin-top: 20px;
     }
 
-    .main-container {
+    .container {
+
         width: 95%;
     }
 
-    .menu {
-        width: 100%;
-    }
+    .tab-button {
 
-    .menu a {
         width: 50%;
 
-        text-align: center;
-
-        padding: 14px 5px;
+        padding: 14px 15px;
     }
 
-    .profile-details {
-        flex-direction: column;
+    .content-box {
 
-        align-items: center;
-    }
-
-    .profile-image {
-        width: 160px;
-    }
-
-    .content {
         padding: 22px 18px;
     }
 
@@ -372,34 +300,33 @@ footer {
 </head>
 
 
+
 <body>
 
 
-<!-- ==================================================
-     HEADER
-================================================== -->
+<!-- =========================================
+     BLACK HEADER
+========================================= -->
 
 <header>
 
-    <div class="header-title">
+    <div>
 
-        <h1>Bimal K C, Ph.D.</h1>
+        <h1>
+            Bimal K C, Ph.D.
+        </h1>
 
-        <p>
+        <h3>
             Professor of Physics at Central Texas College
-        </p>
+        </h3>
 
     </div>
 
 
-    <!--
-    Change CV.pdf to the exact filename
-    of your CV if needed.
-    -->
-
-    <a href="CV.pdf"
-       class="cv-box"
-       target="_blank">
+    <a
+        href="CV.pdf"
+        target="_blank"
+        class="cv-box">
 
         My CV
 
@@ -409,175 +336,112 @@ footer {
 
 
 
-<!-- ==================================================
-     MAIN PAGE
-================================================== -->
+<!-- =========================================
+     MAIN CONTAINER
+========================================= -->
 
-<div class="main-container">
+<div class="container">
 
 
-    <!-- ==================================================
+    <!-- =====================================
          MENU
-    ================================================== -->
+    ====================================== -->
 
-    <nav class="menu">
+    <div class="tabs">
 
-        <a href="#about">
+
+        <button
+            class="tab-button active"
+            onclick="openTab('about-content', this)">
+
             About Me
-        </a>
 
-        <a href="#teaching">
+        </button>
+
+
+        <button
+            class="tab-button"
+            onclick="openTab('teaching-content', this)">
+
             Teaching
-        </a>
 
-    </nav>
-
+        </button>
 
 
-    <!-- ==================================================
-         CONTENT
-    ================================================== -->
-
-    <main class="content">
+    </div>
 
 
-        <!-- ==================================================
+
+    <!-- =====================================
+         WHITE CONTENT BOX
+    ====================================== -->
+
+    <div class="content-box">
+
+
+
+        <!-- =================================
              ABOUT ME
-        ================================================== -->
+        ================================== -->
 
-        <section id="about">
-
-
-            <div class="profile-details">
-
-
-                <!--
-                OPTIONAL PROFILE PICTURE
-
-                If you have a picture called profile.jpg,
-                remove the comments around the image below.
-
-                <img
-                    src="profile.jpg"
-                    alt="Bimal K C"
-                    class="profile-image"
-                >
-                -->
+        <div
+            id="about-content"
+            class="tab-content active">
 
 
-                <div class="profile-text">
+            <p>
+
+                I was born and raised in Nepal, where I earned a Bachelor
+                of Science and a Master of Science in Physics from
+                Tribhuvan University. In 2019, I obtained a Master of
+                Science in Physics from The University of Texas at El
+                Paso (UTEP). I received my Doctor of Philosophy (Ph.D.)
+                degree in Computational Science from UTEP in December
+                2024 with the
+                <em>
+                Academic &amp; Research Excellence Outstanding Graduate
+                Student Computational Science
+                </em>
+                award.
+
+            </p>
 
 
-                    <p>
-                        I was born and raised in Nepal, where I earned
-                        a Bachelor of Science and a Master of Science
-                        in Physics from Tribhuvan University.
-                    </p>
+            <p>
 
+                My Ph.D. research focuses on modeling the free energy
+                and thermal properties of solids, especially transition
+                metals, under high pressures and temperatures. We aim
+                to develop a more accurate method for evaluating thermal
+                properties and equations of state (EOS) in these extreme
+                conditions. This involves computing the free energies of
+                elemental metals and alloys and assessing their phase
+                stability with temperature and pressure. Also, we
+                incorporated the temperature effect in our calculation
+                using harmonic ensemble lattice dynamics (HELD)
+                employing classical molecular dynamics (LAMMPS) as well
+                as quantum molecular dynamics (QMD).
 
-                    <p>
-                        In 2019, I obtained a Master of Science in
-                        Physics from The University of Texas at El Paso
-                        (UTEP). I received my Doctor of Philosophy
-                        (Ph.D.) degree in Computational Science from
-                        UTEP in December 2024 with the
-                        <em>
-                            Academic &amp; Research Excellence
-                            Outstanding Graduate Student
-                            Computational Science
-                        </em>
-                        award.
-                    </p>
-
-
-                    <p>
-                        My research focuses on computational physics
-                        and materials science, particularly the thermal
-                        properties, lattice dynamics, free energy, and
-                        equations of state of transition metals and
-                        alloys under high pressures and temperatures.
-                    </p>
-
-
-                    <p>
-                        My work uses first-principles calculations,
-                        density functional theory, molecular dynamics,
-                        lattice dynamics, and computational methods to
-                        understand material properties at finite
-                        temperatures.
-                    </p>
-
-
-                </div>
-
-            </div>
+            </p>
 
 
 
-            <!-- ==========================================
-                 RESEARCH
-            =========================================== -->
+            <!-- =============================
+                 ORIGINAL AWARD IMAGE
+            ============================== -->
 
-            <div class="research-box">
-
-                <h3>Research Interests</h3>
-
-                <ul>
-
-                    <li>
-                        Computational Physics
-                    </li>
-
-                    <li>
-                        Computational Materials Science
-                    </li>
-
-                    <li>
-                        Density Functional Theory
-                    </li>
-
-                    <li>
-                        Molecular Dynamics
-                    </li>
-
-                    <li>
-                        Lattice Dynamics and Phonons
-                    </li>
-
-                    <li>
-                        Thermal Properties of Materials
-                    </li>
-
-                    <li>
-                        High-Pressure and High-Temperature Materials
-                    </li>
-
-                </ul>
-
-            </div>
-
-
-
-            <!-- ==========================================
-                 AWARD
-            =========================================== -->
-
-            <div class="award-section">
+            <div class="award-container">
 
 
                 <!--
-                If your award image is named differently,
-                change award.jpg below.
-
-                Example:
-                src="images/award.jpg"
+                IMPORTANT:
+                Change this filename to your ORIGINAL
+                certificate image filename if necessary.
                 -->
-
 
                 <img
                     src="award.jpg"
-                    alt="Outstanding Achievement Award"
-                >
+                    alt="Outstanding Achievement Award">
 
 
                 <div class="award-caption">
@@ -587,44 +451,49 @@ footer {
 
                 </div>
 
+
             </div>
 
 
-        </section>
+        </div>
 
 
 
-        <!-- ==================================================
+        <!-- =================================
              TEACHING
-        ================================================== -->
+             
+             HIDDEN WHEN PAGE FIRST LOADS
+        ================================== -->
 
-        <section id="teaching">
+        <div
+            id="teaching-content"
+            class="tab-content">
 
 
-            <h2>Teaching</h2>
+            <h2>
+                Teaching
+            </h2>
 
 
             <p>
+
                 I am currently a Professor of Physics at Central Texas
-                College. My teaching focuses on helping students
-                understand fundamental physics concepts through
+                College. My teaching focuses on helping students develop
+                a strong understanding of physics concepts through
                 lectures, problem solving, laboratory experiments,
                 demonstrations, and real-world applications.
-            </p>
 
-
-            <p>
-                I emphasize conceptual understanding together with
-                mathematical problem-solving skills and encourage
-                students to connect physics principles with everyday
-                physical phenomena.
             </p>
 
 
 
-            <div class="course-box">
+            <div class="teaching-box">
 
-                <h3>Courses Taught</h3>
+
+                <h3>
+                    Courses Taught
+                </h3>
+
 
                 <ul>
 
@@ -646,28 +515,77 @@ footer {
 
                 </ul>
 
+
             </div>
 
 
-        </section>
+        </div>
 
 
-    </main>
+    </div>
 
 
 </div>
 
 
 
-<!-- ==================================================
-     FOOTER
-================================================== -->
+<!-- =========================================
+     JAVASCRIPT
+========================================= -->
 
-<footer>
+<script>
 
-    &copy; 2026 Bimal K C. All Rights Reserved.
+function openTab(tabId, button) {
 
-</footer>
+    /*
+       Hide all content sections
+    */
+
+    const contents =
+        document.querySelectorAll(".tab-content");
+
+    contents.forEach(function(content) {
+
+        content.classList.remove("active");
+
+    });
+
+
+
+    /*
+       Remove active style from menu buttons
+    */
+
+    const buttons =
+        document.querySelectorAll(".tab-button");
+
+    buttons.forEach(function(btn) {
+
+        btn.classList.remove("active");
+
+    });
+
+
+
+    /*
+       Show selected content
+    */
+
+    document
+        .getElementById(tabId)
+        .classList.add("active");
+
+
+
+    /*
+       Highlight selected menu
+    */
+
+    button.classList.add("active");
+
+}
+
+</script>
 
 
 </body>
