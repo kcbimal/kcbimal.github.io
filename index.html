@@ -1,6 +1,3 @@
-Below is the full updated HTML with the **Publications** tab added to the right of **Teaching**, containing only your five publications. I also adjusted the mobile tabs to fit three tabs properly.
-
-```html id="58321"
 <!DOCTYPE html>
 <html lang="en">
 
@@ -612,42 +609,37 @@ header {
 
 .publication-list {
     margin-top: 25px;
+    counter-reset: publication;
 }
 
 .publication-item {
-    margin-bottom: 25px;
-    padding-bottom: 20px;
-
-    border-bottom: 1px solid #ddd;
+    position: relative;
+    margin-bottom: 18px;
+    padding-left: 30px;
 }
 
-.publication-item:last-child {
-    border-bottom: none;
+.publication-item::before {
+    counter-increment: publication;
+    content: counter(publication) ".";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 15px;
 }
 
 .publication-item h3 {
-    margin-top: 0;
-    margin-bottom: 8px;
-
-    font-size: 17px;
-    line-height: 1.4;
+    display: none;
 }
 
 .publication-item p {
-    margin-top: 5px;
-    margin-bottom: 8px;
-
+    margin: 0 0 4px 0;
     font-size: 15px;
     line-height: 1.45;
-
     text-align: left;
 }
 
 .publication-item a {
     color: #000;
-
-    font-weight: 600;
-
     text-decoration: underline;
 }
 
@@ -1554,177 +1546,58 @@ footer {
             class="tab-content">
 
 
-            <h2>
-                Publications
-            </h2>
 
 
             <div class="publication-list">
 
 
-                <!-- =================================================
-                     PUBLICATION 1
-                ================================================== -->
-
                 <div class="publication-item">
-
-                    <h3>
-                        1. Physics-Informed Machine Learning for Refractory Alloy Design
-                    </h3>
-
                     <p>
-                        B. Ayirizia, <strong>B. K C</strong>, J. A. Muñoz.
-                        <i>
-                            Physics-Informed Machine Learning for Refractory Alloy Design
-                        </i>.
-                        arXiv preprint (2026).
+                        B. Ayirizia, <strong>B. K C</strong>, J. A. Muñoz,
+                        “Physics-Informed Machine Learning for Refractory Alloy Design,”
+                        <i>arXiv preprint</i> (2026).
+                        <a href="https://doi.org/10.48550/arXiv.2608.03805" target="_blank" rel="noopener noreferrer">DOI / arXiv</a>
                     </p>
-
-                    <p>
-
-                        <a
-                            href="https://doi.org/10.48550/arXiv.2608.03805"
-                            target="_blank"
-                            rel="noopener noreferrer">
-
-                            DOI / arXiv
-
-                        </a>
-
-                    </p>
-
                 </div>
 
 
-
-                <!-- =================================================
-                     PUBLICATION 2
-                ================================================== -->
-
                 <div class="publication-item">
-
-                    <h3>
-                        2. First Principles Study of NaCl···A-B Type
-                        (A-B = Acceptor) Complexes
-                    </h3>
-
                     <p>
-                        <strong>B. K C</strong>, R. Parajuli.
-                        <i>
-                            Journal of Institute of Science and Technology
-                        </i>,
-                        30(1), 65–72.
+                        <strong>B. K C</strong>, R. Parajuli,
+                        “First Principles Study of NaCl···A-B Type (A-B = Acceptor) Complexes,”
+                        <i>Journal of Institute of Science and Technology</i>, 30(1), 65–72.
+                        <a href="https://doi.org/10.3126/jist.v30i1.68199" target="_blank" rel="noopener noreferrer">DOI</a>
                     </p>
-
-                    <p>
-
-                        <a
-                            href="https://doi.org/10.3126/jist.v30i1.68199"
-                            target="_blank"
-                            rel="noopener noreferrer">
-
-                            DOI / Publication
-
-                        </a>
-
-                    </p>
-
                 </div>
 
 
-
-                <!-- =================================================
-                     PUBLICATION 3
-                ================================================== -->
-
                 <div class="publication-item">
-
-                    <h3>
-                        3. Lattice Dynamics &amp; Free Energies of Fe-V Alloys
-                        with Thermal &amp; Chemical Disorder
-                    </h3>
-
                     <p>
-                        C. Diaz-Caraveo, <strong>B. K C</strong>,
-                        J. A. Muñoz.
-                        <i>
-                            Journal of Physics: Condensed Matter
-                        </i>.
+                        C. Diaz-Caraveo, <strong>B. K C</strong>, J. A. Muñoz,
+                        “Lattice Dynamics &amp; Free Energies of Fe-V Alloys with Thermal &amp; Chemical Disorder,”
+                        <i>Journal of Physics: Condensed Matter</i>.
+                        <a href="https://doi.org/10.1088/1361-648X/ad66a5" target="_blank" rel="noopener noreferrer">DOI</a>
                     </p>
-
-                    <p>
-
-                        <a
-                            href="https://doi.org/10.1088/1361-648X/ad66a5"
-                            target="_blank"
-                            rel="noopener noreferrer">
-
-                            DOI / Publication
-
-                        </a>
-
-                    </p>
-
                 </div>
 
 
-
-                <!-- =================================================
-                     PUBLICATION 4
-                ================================================== -->
-
                 <div class="publication-item">
-
-                    <h3>
-                        4. Thermally Frustrated Phase Transition at High
-                        Pressure in B2-Ordered FeV
-                    </h3>
-
                     <p>
-                        Homero Reyes-Pulido, <strong>Bimal K C</strong>,
-                        Ravhi S. Kumar, Russell J. Hemley, Jorge A. Muñoz.
-                        <i>
-                            AIP Advances
-                        </i>,
-                        14(7), 075108 (2024).
+                        Homero Reyes-Pulido, <strong>Bimal K C</strong>, Ravhi S. Kumar, Russell J. Hemley, Jorge A. Muñoz,
+                        “Thermally frustrated phase transition at high pressure in B2-ordered FeV,”
+                        <i>AIP Advances</i>, 14(7), 075108 (2024).
+                        <a href="https://doi.org/10.1063/5.0219881" target="_blank" rel="noopener noreferrer">DOI</a>
                     </p>
-
-                    <p>
-
-                        <a
-                            href="https://doi.org/10.1063/5.0219881"
-                            target="_blank"
-                            rel="noopener noreferrer">
-
-                            DOI / Publication
-
-                        </a>
-
-                    </p>
-
                 </div>
 
 
-
-                <!-- =================================================
-                     PUBLICATION 5
-                ================================================== -->
-
                 <div class="publication-item">
-
-                    <h3>
-                        5. Why Optimization Is Faster than Solving Systems
-                        of Equations: A Qualitative Explanation
-                    </h3>
-
                     <p>
-                        S. Deng, <strong>B. K C</strong>, V. Kreinovich.
-                        <i>
-                            Uncertainty, Constraints, and Decision Making
-                        </i>.
+                        S. Deng, <strong>B. K C</strong>, V. Kreinovich,
+                        “Why Optimization Is Faster than Solving Systems of Equations: A Qualitative Explanation,”
+                        <i>Uncertainty, Constraints, and Decision Making</i>.
                         Cham: Springer Nature Switzerland, 2023, 341–344.
                     </p>
-
                 </div>
 
 
@@ -2191,4 +2064,3 @@ document.addEventListener(
 </body>
 
 </html>
-```
