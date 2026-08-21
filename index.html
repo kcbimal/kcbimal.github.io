@@ -1,3 +1,6 @@
+Below is the full updated HTML with the **Publications** tab added to the right of **Teaching**, containing only your five publications. I also adjusted the mobile tabs to fit three tabs properly.
+
+```html id="58321"
 <!DOCTYPE html>
 <html lang="en">
 
@@ -112,10 +115,11 @@ header {
 }
 
 .tab-button {
-    width: 255px;
+    flex: 1;
+
     height: 47px;
 
-    padding: 0 30px;
+    padding: 0 20px;
 
     border: none;
     border-right: 1px solid #ddd;
@@ -127,11 +131,15 @@ header {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
 
-    text-align: left;
+    text-align: center;
 
     cursor: pointer;
 
     transition: 0.2s;
+}
+
+.tab-button:last-child {
+    border-right: none;
 }
 
 .tab-button:hover {
@@ -588,6 +596,67 @@ header {
 
 
 /* =========================================================
+   PUBLICATIONS PAGE
+========================================================= */
+
+#publications-content h2 {
+    margin-top: 0;
+    margin-bottom: 25px;
+
+    font-size: 25px;
+
+    padding-bottom: 10px;
+
+    border-bottom: 1px solid #ccc;
+}
+
+.publication-list {
+    margin-top: 25px;
+}
+
+.publication-item {
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid #ddd;
+}
+
+.publication-item:last-child {
+    border-bottom: none;
+}
+
+.publication-item h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+
+    font-size: 17px;
+    line-height: 1.4;
+}
+
+.publication-item p {
+    margin-top: 5px;
+    margin-bottom: 8px;
+
+    font-size: 15px;
+    line-height: 1.45;
+
+    text-align: left;
+}
+
+.publication-item a {
+    color: #000;
+
+    font-weight: 600;
+
+    text-decoration: underline;
+}
+
+.publication-item a:hover {
+    color: #555;
+}
+
+
+/* =========================================================
    FOOTER
 ========================================================= */
 
@@ -651,13 +720,26 @@ footer {
         max-width: 95%;
     }
 
-    .tab-button {
-        width: 50%;
 
-        padding: 0 10px;
+    /* =====================================================
+       MOBILE TABS
+    ====================================================== */
+
+    .tabs {
+        height: 47px;
+    }
+
+    .tab-button {
+        width: 33.3333%;
+        flex: 1;
+
+        padding: 0 5px;
+
+        font-size: 13px;
 
         text-align: center;
     }
+
 
     .content-box {
         padding: 22px 18px 40px 18px;
@@ -670,7 +752,9 @@ footer {
     }
 
 
-    /* ABOUT ME SLIDESHOW */
+    /* =====================================================
+       ABOUT ME SLIDESHOW
+    ====================================================== */
 
     .slideshow-container {
         max-width: 100%;
@@ -701,7 +785,9 @@ footer {
     }
 
 
-    /* TEACHING BOX */
+    /* =====================================================
+       TEACHING BOX
+    ====================================================== */
 
     .teaching-box {
         grid-template-columns: 1fr;
@@ -712,7 +798,9 @@ footer {
     }
 
 
-    /* TEACHING SLIDESHOW */
+    /* =====================================================
+       TEACHING SLIDESHOW
+    ====================================================== */
 
     .teaching-slideshow {
         min-height: 280px;
@@ -733,6 +821,26 @@ footer {
         font-size: 21px;
     }
 
+
+    /* =====================================================
+       PUBLICATIONS
+    ====================================================== */
+
+    #publications-content p {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .publication-item h3 {
+        font-size: 16px;
+    }
+
+    .publication-item p {
+        font-size: 14px;
+
+        line-height: 1.4;
+    }
+
 }
 
 
@@ -748,6 +856,12 @@ footer {
 
     .header-left h3 {
         font-size: 13px;
+    }
+
+    .tab-button {
+        font-size: 12px;
+
+        padding: 0 2px;
     }
 
     .teaching-box {
@@ -768,6 +882,23 @@ footer {
 
     .teaching-slide img {
         height: 240px;
+    }
+
+}
+
+
+/* =========================================================
+   PUBLICATION MOBILE LINK FIX
+========================================================= */
+
+@media screen and (max-width: 450px) {
+
+    .publication-item h3 {
+        font-size: 15px;
+    }
+
+    .publication-item p {
+        font-size: 13px;
     }
 
 }
@@ -826,6 +957,8 @@ footer {
     <div class="tabs">
 
 
+        <!-- ABOUT ME TAB -->
+
         <button
             id="about-button"
             class="tab-button active"
@@ -836,12 +969,26 @@ footer {
         </button>
 
 
+        <!-- TEACHING TAB -->
+
         <button
             id="teaching-button"
             class="tab-button"
             onclick="openTab('teaching-content', this)">
 
             Teaching
+
+        </button>
+
+
+        <!-- PUBLICATIONS TAB -->
+
+        <button
+            id="publications-button"
+            class="tab-button"
+            onclick="openTab('publications-content', this)">
+
+            Publications
 
         </button>
 
@@ -1121,25 +1268,15 @@ footer {
             <div class="dots-container">
 
                 <span class="dot" onclick="currentSlide(1)"></span>
-
                 <span class="dot" onclick="currentSlide(2)"></span>
-
                 <span class="dot" onclick="currentSlide(3)"></span>
-
                 <span class="dot" onclick="currentSlide(4)"></span>
-
                 <span class="dot" onclick="currentSlide(5)"></span>
-
                 <span class="dot" onclick="currentSlide(6)"></span>
-
                 <span class="dot" onclick="currentSlide(7)"></span>
-
                 <span class="dot" onclick="currentSlide(8)"></span>
-
                 <span class="dot" onclick="currentSlide(9)"></span>
-
                 <span class="dot" onclick="currentSlide(10)"></span>
-
                 <span class="dot" onclick="currentSlide(11)"></span>
 
             </div>
@@ -1286,7 +1423,7 @@ footer {
 
                         <img
                             src="./index_files/11.png"
-                            alt="">
+                            alt="Teaching">
 
                     </div>
 
@@ -1298,7 +1435,7 @@ footer {
 
                         <img
                             src="./index_files/22.png"
-                            alt="">
+                            alt="Teaching">
 
                     </div>
 
@@ -1310,7 +1447,7 @@ footer {
 
                         <img
                             src="./index_files/33.png"
-                            alt="">
+                            alt="Teaching">
 
                     </div>
 
@@ -1322,7 +1459,7 @@ footer {
 
                         <img
                             src="./index_files/44.png"
-                            alt="">
+                            alt="Teaching">
 
                     </div>
 
@@ -1334,15 +1471,13 @@ footer {
 
                         <img
                             src="./index_files/55.png"
-                            alt="">
+                            alt="Teaching">
 
                     </div>
 
 
 
-                    <!-- =================================================
-                         PREVIOUS BUTTON
-                    ================================================== -->
+                    <!-- PREVIOUS BUTTON -->
 
                     <button
                         class="teaching-prev"
@@ -1355,9 +1490,7 @@ footer {
 
 
 
-                    <!-- =================================================
-                         NEXT BUTTON
-                    ================================================== -->
+                    <!-- NEXT BUTTON -->
 
                     <button
                         class="teaching-next"
@@ -1370,9 +1503,7 @@ footer {
 
 
 
-                    <!-- =================================================
-                         TEACHING PHOTO DOTS
-                    ================================================== -->
+                    <!-- TEACHING PHOTO DOTS -->
 
                     <div class="teaching-dots">
 
@@ -1403,6 +1534,196 @@ footer {
 
                     </div>
 
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             PUBLICATIONS
+        ================================================== -->
+
+        <div
+            id="publications-content"
+            class="tab-content">
+
+
+            <h2>
+                Publications
+            </h2>
+
+
+            <div class="publication-list">
+
+
+                <!-- =================================================
+                     PUBLICATION 1
+                ================================================== -->
+
+                <div class="publication-item">
+
+                    <h3>
+                        1. Physics-Informed Machine Learning for Refractory Alloy Design
+                    </h3>
+
+                    <p>
+                        B. Ayirizia, <strong>B. K C</strong>, J. A. Muñoz.
+                        <i>
+                            Physics-Informed Machine Learning for Refractory Alloy Design
+                        </i>.
+                        arXiv preprint (2026).
+                    </p>
+
+                    <p>
+
+                        <a
+                            href="https://doi.org/10.48550/arXiv.2608.03805"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            DOI / arXiv
+
+                        </a>
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     PUBLICATION 2
+                ================================================== -->
+
+                <div class="publication-item">
+
+                    <h3>
+                        2. First Principles Study of NaCl···A-B Type
+                        (A-B = Acceptor) Complexes
+                    </h3>
+
+                    <p>
+                        <strong>B. K C</strong>, R. Parajuli.
+                        <i>
+                            Journal of Institute of Science and Technology
+                        </i>,
+                        30(1), 65–72.
+                    </p>
+
+                    <p>
+
+                        <a
+                            href="https://doi.org/10.3126/jist.v30i1.68199"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            DOI / Publication
+
+                        </a>
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     PUBLICATION 3
+                ================================================== -->
+
+                <div class="publication-item">
+
+                    <h3>
+                        3. Lattice Dynamics &amp; Free Energies of Fe-V Alloys
+                        with Thermal &amp; Chemical Disorder
+                    </h3>
+
+                    <p>
+                        C. Diaz-Caraveo, <strong>B. K C</strong>,
+                        J. A. Muñoz.
+                        <i>
+                            Journal of Physics: Condensed Matter
+                        </i>.
+                    </p>
+
+                    <p>
+
+                        <a
+                            href="https://doi.org/10.1088/1361-648X/ad66a5"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            DOI / Publication
+
+                        </a>
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     PUBLICATION 4
+                ================================================== -->
+
+                <div class="publication-item">
+
+                    <h3>
+                        4. Thermally Frustrated Phase Transition at High
+                        Pressure in B2-Ordered FeV
+                    </h3>
+
+                    <p>
+                        Homero Reyes-Pulido, <strong>Bimal K C</strong>,
+                        Ravhi S. Kumar, Russell J. Hemley, Jorge A. Muñoz.
+                        <i>
+                            AIP Advances
+                        </i>,
+                        14(7), 075108 (2024).
+                    </p>
+
+                    <p>
+
+                        <a
+                            href="https://doi.org/10.1063/5.0219881"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            DOI / Publication
+
+                        </a>
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     PUBLICATION 5
+                ================================================== -->
+
+                <div class="publication-item">
+
+                    <h3>
+                        5. Why Optimization Is Faster than Solving Systems
+                        of Equations: A Qualitative Explanation
+                    </h3>
+
+                    <p>
+                        S. Deng, <strong>B. K C</strong>, V. Kreinovich.
+                        <i>
+                            Uncertainty, Constraints, and Decision Making
+                        </i>.
+                        Cham: Springer Nature Switzerland, 2023, 341–344.
+                    </p>
 
                 </div>
 
@@ -1842,12 +2163,22 @@ document.addEventListener(
 
 
         document
+            .getElementById("publications-content")
+            .classList.remove("active");
+
+
+        document
             .getElementById("about-button")
             .classList.add("active");
 
 
         document
             .getElementById("teaching-button")
+            .classList.remove("active");
+
+
+        document
+            .getElementById("publications-button")
             .classList.remove("active");
 
 
@@ -1860,3 +2191,4 @@ document.addEventListener(
 </body>
 
 </html>
+```
