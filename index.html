@@ -185,7 +185,7 @@ header {
 
 
 /* =========================================================
-   SLIDESHOW
+   ABOUT ME SLIDESHOW
 ========================================================= */
 
 .slideshow-container {
@@ -221,7 +221,7 @@ header {
 
 
 /* =========================================================
-   SLIDE CAPTION
+   ABOUT ME SLIDE CAPTION
 ========================================================= */
 
 .text {
@@ -236,7 +236,7 @@ header {
 
 
 /* =========================================================
-   SLIDESHOW DOTS
+   ABOUT ME SLIDESHOW DOTS
 ========================================================= */
 
 .dots-container {
@@ -272,7 +272,7 @@ header {
 
 
 /* =========================================================
-   PREVIOUS / NEXT BUTTONS
+   ABOUT ME PREVIOUS / NEXT BUTTONS
 ========================================================= */
 
 .prev,
@@ -314,7 +314,7 @@ header {
 
 
 /* =========================================================
-   FADE EFFECT
+   ABOUT ME FADE EFFECT
 ========================================================= */
 
 .fade {
@@ -361,7 +361,7 @@ header {
 
 
 /* =========================================================
-   COURSES TAUGHT
+   TEACHING BOX
 ========================================================= */
 
 .teaching-box {
@@ -372,6 +372,23 @@ header {
     background-color: #f5f5f5;
 
     border-left: 4px solid #000;
+
+    display: grid;
+
+    grid-template-columns: 320px 1fr;
+
+    gap: 30px;
+
+    align-items: stretch;
+}
+
+
+/* =========================================================
+   TEACHING INFORMATION
+========================================================= */
+
+.teaching-info {
+    min-width: 0;
 }
 
 .teaching-box h3 {
@@ -400,6 +417,173 @@ header {
 
     font-size: 16px;
     line-height: 1.4;
+}
+
+
+/* =========================================================
+   TEACHING PHOTO SLIDESHOW
+========================================================= */
+
+.teaching-slideshow {
+    position: relative;
+
+    width: 100%;
+
+    min-height: 380px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background-color: #fff;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   TEACHING SLIDES
+========================================================= */
+
+.teaching-slide {
+    display: none;
+
+    width: 100%;
+
+    height: 100%;
+
+    text-align: center;
+}
+
+.teaching-slide img {
+    display: block;
+
+    width: 100%;
+
+    height: 380px;
+
+    object-fit: contain;
+
+    background-color: #fff;
+}
+
+
+/* =========================================================
+   TEACHING PREVIOUS / NEXT BUTTONS
+========================================================= */
+
+.teaching-prev,
+.teaching-next {
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    z-index: 5;
+
+    width: 42px;
+
+    height: 50px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background-color: rgba(0,0,0,0.5);
+
+    color: #fff;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.teaching-prev {
+    left: 10px;
+}
+
+.teaching-next {
+    right: 10px;
+}
+
+.teaching-prev:hover,
+.teaching-next:hover {
+    background-color: rgba(0,0,0,0.85);
+}
+
+
+/* =========================================================
+   TEACHING SLIDESHOW DOTS
+========================================================= */
+
+.teaching-dots {
+    position: absolute;
+
+    bottom: 10px;
+
+    left: 0;
+
+    right: 0;
+
+    text-align: center;
+
+    z-index: 10;
+}
+
+.teaching-dot {
+    display: inline-block;
+
+    width: 10px;
+
+    height: 10px;
+
+    margin: 0 4px;
+
+    border-radius: 50%;
+
+    background-color: #bbb;
+
+    cursor: pointer;
+
+    transition: background-color 0.3s;
+}
+
+.teaching-dot.active {
+    background-color: #000;
+}
+
+.teaching-dot:hover {
+    background-color: #555;
+}
+
+
+/* =========================================================
+   TEACHING FADE EFFECT
+========================================================= */
+
+.teaching-fade {
+    animation-name: teachingFade;
+
+    animation-duration: 0.6s;
+}
+
+@keyframes teachingFade {
+
+    from {
+        opacity: 0.4;
+    }
+
+    to {
+        opacity: 1;
+    }
+
 }
 
 
@@ -485,6 +669,9 @@ footer {
         line-height: 1.35;
     }
 
+
+    /* ABOUT ME SLIDESHOW */
+
     .slideshow-container {
         max-width: 100%;
 
@@ -511,6 +698,76 @@ footer {
         height: 9px;
 
         margin: 3px;
+    }
+
+
+    /* TEACHING BOX */
+
+    .teaching-box {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+
+        padding: 20px;
+    }
+
+
+    /* TEACHING SLIDESHOW */
+
+    .teaching-slideshow {
+        min-height: 280px;
+
+        width: 100%;
+    }
+
+    .teaching-slide img {
+        height: 280px;
+    }
+
+    .teaching-prev,
+    .teaching-next {
+        width: 36px;
+
+        height: 44px;
+
+        font-size: 21px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE DEVICES
+========================================================= */
+
+@media screen and (max-width: 450px) {
+
+    .header-left h1 {
+        font-size: 23px;
+    }
+
+    .header-left h3 {
+        font-size: 13px;
+    }
+
+    .teaching-box {
+        padding: 15px;
+    }
+
+    .teaching-box h3 {
+        font-size: 17px;
+    }
+
+    .teaching-box h4 {
+        font-size: 15px;
+    }
+
+    .teaching-box li {
+        font-size: 14px;
+    }
+
+    .teaching-slide img {
+        height: 240px;
     }
 
 }
@@ -647,7 +904,7 @@ footer {
 
 
             <!-- =================================================
-                 SLIDESHOW
+                 ABOUT ME SLIDESHOW
             ================================================== -->
 
             <div class="slideshow-container">
@@ -833,7 +1090,8 @@ footer {
 
                 <button
                     class="prev"
-                    onclick="changeSlide(-1)">
+                    onclick="changeSlide(-1)"
+                    aria-label="Previous slide">
 
                     &#10094;
 
@@ -844,7 +1102,8 @@ footer {
 
                 <button
                     class="next"
-                    onclick="changeSlide(1)">
+                    onclick="changeSlide(1)"
+                    aria-label="Next slide">
 
                     &#10095;
 
@@ -856,7 +1115,7 @@ footer {
 
 
             <!-- =================================================
-                 SLIDESHOW DOTS
+                 ABOUT ME SLIDESHOW DOTS
             ================================================== -->
 
             <div class="dots-container">
@@ -891,7 +1150,7 @@ footer {
 
 
         <!-- =================================================
-             TEACHING Bio
+             TEACHING
         ================================================== -->
 
         <div
@@ -924,83 +1183,228 @@ footer {
 
 
             <!-- =================================================
-                 COURSES TAUGHT
+                 COURSES + TEACHING PHOTOS
             ================================================== -->
 
             <div class="teaching-box">
 
 
-                <h3>
-                    Courses Taught During the Three Most Recent Semesters
-                </h3>
+                <!-- =================================================
+                     COURSE INFORMATION
+                ================================================== -->
+
+                <div class="teaching-info">
+
+
+                    <h3>
+                        Courses Taught During the Three Most Recent Semesters
+                    </h3>
 
 
 
-                <!-- FALL 2026 -->
+                    <!-- FALL 2026 -->
 
-                <h4>
-                    Fall 2026
-                </h4>
+                    <h4>
+                        Fall 2026
+                    </h4>
 
-                <ul>
+                    <ul>
 
-                    <li>
-                        University Physics I [PHYS 2425]
-                    </li>
+                        <li>
+                            University Physics I [PHYS 2425]
+                        </li>
 
-                    <li>
-                        College Physics I [PHYS 1401]
-                    </li>
+                        <li>
+                            College Physics I [PHYS 1401]
+                        </li>
 
-                    <li>
-                        Physical Science [PHYS 1415]
-                    </li>
+                        <li>
+                            Physical Science [PHYS 1415]
+                        </li>
 
-                </ul>
-
-
-
-                <!-- SUMMER 2026 -->
-
-                <h4>
-                    Summer 2026
-                </h4>
-
-                <ul>
-
-                    <li>
-                        College Physics I [PHYS 1401]
-                    </li>
-
-                    <li>
-                        Physical Science [PHYS 1415]
-                    </li>
-
-                </ul>
+                    </ul>
 
 
 
-                <!-- SPRING 2026 -->
+                    <!-- SUMMER 2026 -->
 
-                <h4>
-                    Spring 2026
-                </h4>
+                    <h4>
+                        Summer 2026
+                    </h4>
 
-                <ul>
+                    <ul>
 
-                    <li>
-                        University Physics II [PHYS 2426]
-                    </li>
+                        <li>
+                            College Physics I [PHYS 1401]
+                        </li>
 
-                    <li>
-                        College Physics II [PHYS 1402]
-                    </li>
+                        <li>
+                            Physical Science [PHYS 1415]
+                        </li>
 
-                    <li>
-                        Physical Science [PHYS 1415]
-                    </li>
+                    </ul>
 
-                </ul>
+
+
+                    <!-- SPRING 2026 -->
+
+                    <h4>
+                        Spring 2026
+                    </h4>
+
+                    <ul>
+
+                        <li>
+                            University Physics II [PHYS 2426]
+                        </li>
+
+                        <li>
+                            College Physics II [PHYS 1402]
+                        </li>
+
+                        <li>
+                            Physical Science [PHYS 1415]
+                        </li>
+
+                    </ul>
+
+
+                </div>
+
+
+
+                <!-- =================================================
+                     TEACHING PHOTO SLIDESHOW
+                ================================================== -->
+
+                <div class="teaching-slideshow">
+
+
+                    <!-- PHOTO 1 -->
+
+                    <div class="teaching-slide teaching-fade">
+
+                        <img
+                            src="./index_files/11.png"
+                            alt="Teaching photo 1">
+
+                    </div>
+
+
+
+                    <!-- PHOTO 2 -->
+
+                    <div class="teaching-slide teaching-fade">
+
+                        <img
+                            src="./index_files/22.png"
+                            alt="Teaching photo 2">
+
+                    </div>
+
+
+
+                    <!-- PHOTO 3 -->
+
+                    <div class="teaching-slide teaching-fade">
+
+                        <img
+                            src="./index_files/33.png"
+                            alt="Teaching photo 3">
+
+                    </div>
+
+
+
+                    <!-- PHOTO 4 -->
+
+                    <div class="teaching-slide teaching-fade">
+
+                        <img
+                            src="./index_files/44.png"
+                            alt="Teaching photo 4">
+
+                    </div>
+
+
+
+                    <!-- PHOTO 5 -->
+
+                    <div class="teaching-slide teaching-fade">
+
+                        <img
+                            src="./index_files/55.png"
+                            alt="Teaching photo 5">
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                         PREVIOUS BUTTON
+                    ================================================== -->
+
+                    <button
+                        class="teaching-prev"
+                        onclick="changeTeachingSlide(-1)"
+                        aria-label="Previous teaching photo">
+
+                        &#10094;
+
+                    </button>
+
+
+
+                    <!-- =================================================
+                         NEXT BUTTON
+                    ================================================== -->
+
+                    <button
+                        class="teaching-next"
+                        onclick="changeTeachingSlide(1)"
+                        aria-label="Next teaching photo">
+
+                        &#10095;
+
+                    </button>
+
+
+
+                    <!-- =================================================
+                         TEACHING PHOTO DOTS
+                    ================================================== -->
+
+                    <div class="teaching-dots">
+
+                        <span
+                            class="teaching-dot"
+                            onclick="currentTeachingSlide(1)">
+                        </span>
+
+                        <span
+                            class="teaching-dot"
+                            onclick="currentTeachingSlide(2)">
+                        </span>
+
+                        <span
+                            class="teaching-dot"
+                            onclick="currentTeachingSlide(3)">
+                        </span>
+
+                        <span
+                            class="teaching-dot"
+                            onclick="currentTeachingSlide(4)">
+                        </span>
+
+                        <span
+                            class="teaching-dot"
+                            onclick="currentTeachingSlide(5)">
+                        </span>
+
+                    </div>
+
+
+                </div>
 
 
             </div>
@@ -1030,7 +1434,8 @@ footer {
 
         <a
             href="https://scholar.google.com/citations?hl=en&user=fSqUY48AAAAJ"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer">
 
             <img
                 src="https://scholar.google.com/favicon.ico"
@@ -1044,7 +1449,8 @@ footer {
 
         <a
             href="https://www.linkedin.com/in/kcbimal/"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer">
 
             <img
                 src="https://www.linkedin.com/favicon.ico"
@@ -1058,7 +1464,8 @@ footer {
 
         <a
             href="https://github.com/kcbimal"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer">
 
             <img
                 src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Github-desktop-logo-symbol.svg"
@@ -1139,7 +1546,7 @@ function openTab(tabId, clickedButton) {
 
 
 /* =========================================================
-   SLIDESHOW
+   ABOUT ME SLIDESHOW
 ========================================================= */
 
 let slideIndex = 1;
@@ -1148,7 +1555,7 @@ let slideTimer;
 
 
 /* =========================================================
-   SHOW SLIDE
+   SHOW ABOUT ME SLIDE
 ========================================================= */
 
 function showSlide(n) {
@@ -1200,7 +1607,7 @@ function showSlide(n) {
 
 
 /* =========================================================
-   PREVIOUS / NEXT
+   ABOUT ME PREVIOUS / NEXT
 ========================================================= */
 
 function changeSlide(n) {
@@ -1216,7 +1623,7 @@ function changeSlide(n) {
 
 
 /* =========================================================
-   CLICK DOT
+   ABOUT ME DOT CLICK
 ========================================================= */
 
 function currentSlide(n) {
@@ -1232,7 +1639,7 @@ function currentSlide(n) {
 
 
 /* =========================================================
-   AUTOMATIC SLIDESHOW
+   ABOUT ME AUTOMATIC SLIDESHOW
 ========================================================= */
 
 function autoSlide() {
@@ -1246,7 +1653,7 @@ function autoSlide() {
 
 
 /* =========================================================
-   RESTART SLIDESHOW
+   RESTART ABOUT ME SLIDESHOW
 ========================================================= */
 
 function restartSlideshow() {
@@ -1261,6 +1668,135 @@ function restartSlideshow() {
 
 
 /* =========================================================
+   TEACHING PHOTO SLIDESHOW
+========================================================= */
+
+let teachingSlideIndex = 1;
+
+let teachingSlideTimer;
+
+
+/* =========================================================
+   SHOW TEACHING PHOTO
+========================================================= */
+
+function showTeachingSlide(n) {
+
+    const slides =
+        document.getElementsByClassName("teaching-slide");
+
+    const dots =
+        document.getElementsByClassName("teaching-dot");
+
+
+    if (slides.length === 0) {
+
+        return;
+
+    }
+
+
+    if (n > slides.length) {
+
+        teachingSlideIndex = 1;
+
+    }
+
+
+    if (n < 1) {
+
+        teachingSlideIndex = slides.length;
+
+    }
+
+
+    for (let i = 0; i < slides.length; i++) {
+
+        slides[i].style.display = "none";
+
+    }
+
+
+    for (let i = 0; i < dots.length; i++) {
+
+        dots[i].classList.remove("active");
+
+    }
+
+
+    slides[teachingSlideIndex - 1]
+        .style.display = "block";
+
+
+    dots[teachingSlideIndex - 1]
+        .classList.add("active");
+
+}
+
+
+
+/* =========================================================
+   TEACHING PREVIOUS / NEXT
+========================================================= */
+
+function changeTeachingSlide(n) {
+
+    teachingSlideIndex += n;
+
+    showTeachingSlide(teachingSlideIndex);
+
+    restartTeachingSlideshow();
+
+}
+
+
+
+/* =========================================================
+   TEACHING DOT CLICK
+========================================================= */
+
+function currentTeachingSlide(n) {
+
+    teachingSlideIndex = n;
+
+    showTeachingSlide(teachingSlideIndex);
+
+    restartTeachingSlideshow();
+
+}
+
+
+
+/* =========================================================
+   TEACHING AUTOMATIC SLIDESHOW
+========================================================= */
+
+function autoTeachingSlide() {
+
+    teachingSlideIndex++;
+
+    showTeachingSlide(teachingSlideIndex);
+
+}
+
+
+
+/* =========================================================
+   RESTART TEACHING SLIDESHOW
+========================================================= */
+
+function restartTeachingSlideshow() {
+
+    clearInterval(teachingSlideTimer);
+
+    teachingSlideTimer =
+        setInterval(autoTeachingSlide, 3000);
+
+}
+
+
+
+/* =========================================================
    START WEBSITE
 ========================================================= */
 
@@ -1269,7 +1805,9 @@ document.addEventListener(
     function() {
 
 
-        /* Start slideshow */
+        /* ================================================
+           START ABOUT ME SLIDESHOW
+        ================================================ */
 
         showSlide(slideIndex);
 
@@ -1277,7 +1815,21 @@ document.addEventListener(
             setInterval(autoSlide, 3000);
 
 
-        /* Make sure About Me opens first */
+
+        /* ================================================
+           START TEACHING PHOTO SLIDESHOW
+        ================================================ */
+
+        showTeachingSlide(teachingSlideIndex);
+
+        teachingSlideTimer =
+            setInterval(autoTeachingSlide, 3000);
+
+
+
+        /* ================================================
+           MAKE ABOUT ME OPEN FIRST
+        ================================================ */
 
         document
             .getElementById("about-content")
@@ -1301,7 +1853,6 @@ document.addEventListener(
 
     }
 );
-
 
 </script>
 
